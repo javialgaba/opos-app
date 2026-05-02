@@ -1,0 +1,76 @@
+{
+  "formatVersion": 1,
+  "id": "demo-administrativo",
+  "opposition": {
+    "id": "administrativo-demo",
+    "name": "Administrativo Demo"
+  },
+  "title": "Preguntas de ejemplo",
+  "scoring": {
+    "correct": 1,
+    "wrong": -0.33,
+    "blank": 0
+  },
+  "topics": [
+    {
+      "id": "constitucion",
+      "name": "Constitución"
+    },
+    {
+      "id": "procedimiento",
+      "name": "Procedimiento administrativo"
+    }
+  ],
+  "questions": [
+    {
+      "id": "constitucion-001",
+      "topicId": "constitucion",
+      "prompt": "¿Cuál es la norma suprema del ordenamiento jurídico español?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La Constitución Española"
+        },
+        {
+          "id": "B",
+          "text": "El Código Civil"
+        },
+        {
+          "id": "C",
+          "text": "La Ley Orgánica del Poder Judicial"
+        },
+        {
+          "id": "D",
+          "text": "El Estatuto de los Trabajadores"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La Constitución ocupa la posición superior dentro del ordenamiento jurídico."
+    },
+    {
+      "id": "procedimiento-001",
+      "topicId": "procedimiento",
+      "prompt": "Con carácter general, ¿cómo deben producirse los actos administrativos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Siempre de forma oral"
+        },
+        {
+          "id": "B",
+          "text": "Por escrito, salvo que su naturaleza exija otra forma más adecuada"
+        },
+        {
+          "id": "C",
+          "text": "Únicamente mediante decreto"
+        },
+        {
+          "id": "D",
+          "text": "Solo mediante publicación en boletín oficial"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La forma escrita es la regla general, con excepciones cuando la naturaleza del acto aconseje otra forma."
+    }
+  ]
+}

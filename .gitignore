@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+dist
+build
+.env
+.env*.local
+imports/pdfs/*
+!imports/pdfs/.gitkeep
+*.log
+.DS_Store
