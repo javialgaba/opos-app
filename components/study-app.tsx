@@ -36,6 +36,8 @@ type ExamResult = {
     wrong: number;
     blank: number;
     score: number;
+    maxScore: number;
+    grade: number;
   };
   results: Array<AnswerResult & { questionId: string; selectedOptionId: string | null }>;
 };
@@ -239,7 +241,12 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
   }
 
   async function submitPracticeAnswer() {
-    if (!profile || !currentQuestion || !selectedOptionId) {
+    if (!currentQuestion || !selectedOptionId) {
+      return;
+    }
+
+    if (!profile) {
+      setMessage("Introduce un alias antes de corregir para poder guardar el intento.");
       return;
     }
 
@@ -278,7 +285,21 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
   }
 
   async function finishExam() {
-    if (!profile || !queue.length) {
+    if (!queue.length) {
+      return;
+    }
+
+    if (!profile) {
+      setMessage("Introduce un alias antes de finalizar para poder guardar el intento.");
+      return;
+    }
+
+    const answeredCount = queue.filter((question) => examAnswers[question.id]).length;
+    const shouldFinish = window.confirm(
+      `Has seleccionado ${answeredCount} de ${queue.length} preguntas.\n\n¿Deseas terminar la prueba?`
+    );
+
+    if (!shouldFinish) {
       return;
     }
 
@@ -529,6 +550,10 @@ function PracticePanel({
     return <EmptyState text="No hay preguntas para este filtro." />;
   }
 
+  const correctOption = answerResult
+    ? question.options.find((option) => option.id === answerResult.correctOptionId)
+    : null;
+
   return (
     <div className="flex h-full flex-col gap-5">
       <PanelHeading
@@ -554,7 +579,11 @@ function PracticePanel({
             {answerResult.isCorrect ? "Correcta" : "Incorrecta"}
           </div>
           <p className="mt-2 text-sm text-ink/75">
-            Respuesta correcta: <strong>{answerResult.correctOptionId}</strong>
+            Respuesta correcta:{" "}
+            <strong>
+              {answerResult.correctOptionId}
+              {correctOption ? ` · ${correctOption.text}` : ""}
+            </strong>
           </p>
           {answerResult.explanation ? (
             <p className="mt-2 text-sm text-ink/75">{answerResult.explanation}</p>
@@ -617,25 +646,45 @@ function ExamPanel({
       <div className="flex flex-col gap-5">
         <PanelHeading eyebrow="Examen finalizado" title="Resultado" />
         <div className="grid gap-3 sm:grid-cols-4">
+          <Metric label="Calificación" value={`${examResult.summary.grade.toFixed(2)} / 10`} />
           <Metric label="Aciertos" value={examResult.summary.correct} />
           <Metric label="Fallos" value={examResult.summary.wrong} />
           <Metric label="Blancas" value={examResult.summary.blank} />
-          <Metric label="Puntuación" value={examResult.summary.score.toFixed(2)} />
+          <Metric
+            label="Puntuación"
+            value={`${examResult.summary.score.toFixed(2)} / ${examResult.summary.maxScore.toFixed(2)}`}
+          />
         </div>
         <div className="space-y-3">
           {queue.map((item, index) => {
             const result = examResult.results.find((entry) => entry.questionId === item.id);
+            const correctOption = item.options.find(
+              (option) => option.id === result?.correctOptionId
+            );
 
             return (
-              <div className="rounded-md border border-ink/10 p-3" key={item.id}>
+              <div
+                className={`rounded-md border p-3 ${
+                  result?.isCorrect
+                    ? "border-moss/30 bg-moss/10"
+                    : "border-coral/25 bg-coral/5"
+                }`}
+                key={item.id}
+              >
                 <p className="text-sm font-semibold text-ink">
                   {index + 1}. {item.prompt}
                 </p>
                 {result ? (
-                  <p className="mt-2 text-sm text-ink/70">
-                    Marcada: {answers[item.id] ?? "Blanco"} · Correcta:{" "}
-                    {result.correctOptionId}
-                  </p>
+                  <>
+                    <p className="mt-2 text-sm text-ink/70">
+                      Marcada: {answers[item.id] ?? "Blanco"} · Correcta:{" "}
+                      {result.correctOptionId}
+                      {correctOption ? ` · ${correctOption.text}` : ""}
+                    </p>
+                    {result.explanation ? (
+                      <p className="mt-2 text-sm text-ink/70">{result.explanation}</p>
+                    ) : null}
+                  </>
                 ) : null}
               </div>
             );
@@ -656,8 +705,8 @@ function ExamPanel({
         question={question}
         selectedOptionId={answers[question.id] ?? ""}
       />
-      <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex gap-2">
+      <div className="mt-auto flex w-full flex-row items-center justify-between gap-2">
+        <div className="flex flex-1 justify-start">
           <button
             className="inline-flex h-10 items-center gap-2 rounded-md border border-ink/15 bg-white px-3 text-sm font-semibold text-ink transition hover:bg-ink/5 disabled:opacity-50"
             disabled={currentIndex === 0}
@@ -667,6 +716,19 @@ function ExamPanel({
             <ArrowLeft className="size-4" />
             Anterior
           </button>
+        </div>
+        <div className="flex flex-1 justify-center">
+          <button
+            className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-tide px-4 text-sm font-semibold text-white transition hover:bg-tide/90 disabled:cursor-not-allowed disabled:opacity-55"
+            disabled={isLoading}
+            onClick={onFinish}
+            type="button"
+          >
+            {isLoading ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
+            Finalizar examen
+          </button>
+        </div>
+        <div className="flex flex-1 justify-end">
           <button
             className="inline-flex h-10 items-center gap-2 rounded-md border border-ink/15 bg-white px-3 text-sm font-semibold text-ink transition hover:bg-ink/5 disabled:opacity-50"
             disabled={currentIndex === queue.length - 1}
@@ -677,15 +739,6 @@ function ExamPanel({
             <ArrowRight className="size-4" />
           </button>
         </div>
-        <button
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-tide px-4 text-sm font-semibold text-white transition hover:bg-tide/90 disabled:cursor-not-allowed disabled:opacity-55"
-          disabled={isLoading}
-          onClick={onFinish}
-          type="button"
-        >
-          {isLoading ? <Loader2 className="size-4 animate-spin" /> : <Check className="size-4" />}
-          Finalizar examen
-        </button>
       </div>
     </div>
   );

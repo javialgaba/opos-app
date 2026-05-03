@@ -41,3 +41,7 @@ create table if not exists public.exam_sessions (
 
 create index if not exists exam_sessions_profile_created_idx
   on public.exam_sessions(profile_id, created_at desc);
+
+alter table public.profiles enable row level security;
+alter table public.attempts enable row level security;
+alter table public.exam_sessions enable row level security;

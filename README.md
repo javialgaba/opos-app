@@ -30,6 +30,8 @@ SUPABASE_URL="..."
 SUPABASE_SERVICE_ROLE_KEY="..."
 ```
 
+`SUPABASE_SERVICE_ROLE_KEY` debe ser la clave `service_role`/secret del servidor. No uses la `anon` ni la `publishable` (`sb_publishable_...`) porque con RLS activo Supabase bloqueará la creación de perfiles.
+
 Si no configuras Supabase, la app usa memoria temporal para pruebas locales.
 
 ## Preguntas

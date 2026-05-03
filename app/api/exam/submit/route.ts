@@ -22,8 +22,9 @@ export async function POST(request: Request) {
     let wrong = 0;
     let blank = 0;
     let score = 0;
+    let maxScore = 0;
     let oppositionId = "";
-    let topicId: string | null = null;
+    let topicId: string | null | undefined;
 
     for (const answer of body.answers) {
       const question = await findQuestion(answer.questionId);
@@ -33,7 +34,11 @@ export async function POST(request: Request) {
       }
 
       oppositionId ||= question.oppositionId;
-      topicId = topicId && topicId !== question.topicId ? null : question.topicId;
+      if (topicId === undefined) {
+        topicId = question.topicId;
+      } else if (topicId !== question.topicId) {
+        topicId = null;
+      }
 
       const result = scoreAnswer(
         question.scoring,
@@ -50,6 +55,7 @@ export async function POST(request: Request) {
       }
 
       score += result.score;
+      maxScore += question.scoring.correct;
 
       await recordAttempt({
         profileId: body.profileId,
@@ -77,7 +83,7 @@ export async function POST(request: Request) {
       await recordExamSession({
         profileId: body.profileId,
         oppositionId,
-        topicId,
+        topicId: topicId ?? null,
         total: results.length,
         correct,
         wrong,
@@ -92,7 +98,9 @@ export async function POST(request: Request) {
         correct,
         wrong,
         blank,
-        score
+        score,
+        maxScore,
+        grade: maxScore > 0 ? Math.max(0, Math.min(10, (score / maxScore) * 10)) : 0
       },
       results
     });
