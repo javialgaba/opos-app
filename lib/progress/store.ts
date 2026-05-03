@@ -1,4 +1,4 @@
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { asSupabaseError, getServerSupabaseClient } from "../supabase/server";
 
 export type StudyMode = "practice" | "exam";
 
@@ -65,84 +65,6 @@ const memoryState: MemoryState =
     examSessions: []
   });
 
-let supabaseClient: SupabaseClient | null | undefined;
-
-function decodeJwtPayload(key: string) {
-  const parts = key.split(".");
-
-  if (parts.length < 3) {
-    return null;
-  }
-
-  try {
-    return JSON.parse(Buffer.from(parts[1], "base64url").toString("utf8")) as {
-      role?: string;
-    };
-  } catch {
-    return null;
-  }
-}
-
-function assertServerSupabaseKey(key: string) {
-  if (key.startsWith("sb_publishable_")) {
-    throw new Error(
-      "SUPABASE_SERVICE_ROLE_KEY contiene una publishable/anon key. Copia la service_role secret key de Supabase Settings > API y reinicia Next."
-    );
-  }
-
-  const payload = decodeJwtPayload(key);
-
-  if (payload?.role && payload.role !== "service_role") {
-    throw new Error(
-      `SUPABASE_SERVICE_ROLE_KEY tiene rol "${payload.role}", pero la app necesita "service_role" para escribir con RLS activo.`
-    );
-  }
-}
-
-function asSupabaseError(error: unknown, fallback: string) {
-  if (error instanceof Error) {
-    return error;
-  }
-
-  if (error && typeof error === "object" && "message" in error) {
-    const details = error as {
-      code?: string;
-      details?: string | null;
-      message?: string;
-    };
-    const code = details.code ? ` [${details.code}]` : "";
-    const extra = details.details ? ` ${details.details}` : "";
-
-    return new Error(`${details.message ?? fallback}${code}.${extra}`.trim());
-  }
-
-  return new Error(fallback);
-}
-
-function getSupabaseClient() {
-  if (supabaseClient !== undefined) {
-    return supabaseClient;
-  }
-
-  const url = process.env.SUPABASE_URL;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-  if (!url || !serviceKey) {
-    supabaseClient = null;
-    return supabaseClient;
-  }
-
-  assertServerSupabaseKey(serviceKey);
-
-  supabaseClient = createClient(url, serviceKey, {
-    auth: {
-      persistSession: false
-    }
-  });
-
-  return supabaseClient;
-}
-
 export function normalizeAlias(alias: string) {
   return alias.trim().replace(/\s+/g, " ").slice(0, 64);
 }
@@ -170,7 +92,7 @@ export async function getOrCreateProfile(aliasInput: string): Promise<Profile> {
     throw new Error("El alias no puede estar vacío.");
   }
 
-  const supabase = getSupabaseClient();
+  const supabase = getServerSupabaseClient();
 
   if (!supabase) {
     const existing = memoryState.profiles.find(
@@ -229,7 +151,7 @@ export async function getOrCreateProfile(aliasInput: string): Promise<Profile> {
 export async function recordAttempt(
   attempt: Omit<AttemptRecord, "id" | "createdAt">
 ) {
-  const supabase = getSupabaseClient();
+  const supabase = getServerSupabaseClient();
   const createdAt = new Date().toISOString();
 
   if (!supabase) {
@@ -269,7 +191,7 @@ export async function recordAttempt(
 }
 
 export async function recordExamSession(session: ExamSessionInput) {
-  const supabase = getSupabaseClient();
+  const supabase = getServerSupabaseClient();
   const createdAt = new Date().toISOString();
 
   if (!supabase) {
@@ -298,7 +220,7 @@ export async function recordExamSession(session: ExamSessionInput) {
 }
 
 export async function listAttempts(profileId: string) {
-  const supabase = getSupabaseClient();
+  const supabase = getServerSupabaseClient();
 
   if (!supabase) {
     return memoryState.attempts.filter((attempt) => attempt.profileId === profileId);

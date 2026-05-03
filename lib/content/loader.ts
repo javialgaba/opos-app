@@ -7,6 +7,7 @@ import {
   questionPackSchema,
   sanitizeQuestion
 } from "./schema";
+import { loadQuestionPacksFromSupabase } from "./supabase-store";
 
 const CONTENT_DIRECTORIES = ["content/oppositions", "content/imported"];
 
@@ -46,19 +47,7 @@ async function listJsonFiles(directory: string): Promise<string[]> {
   return nested.flat().sort();
 }
 
-export async function loadQuestionPacks(): Promise<LoadedPack[]> {
-  const files = (await Promise.all(CONTENT_DIRECTORIES.map(listJsonFiles))).flat();
-  const packs = await Promise.all(
-    files.map(async (sourcePath) => {
-      const raw = await fs.readFile(path.join(process.cwd(), sourcePath), "utf8");
-      const parsed = questionPackSchema.parse(JSON.parse(raw));
-      return {
-        ...parsed,
-        sourcePath
-      };
-    })
-  );
-
+function assertUniquePackIds(packs: LoadedPack[]) {
   const packIds = new Set<string>();
 
   for (const pack of packs) {
@@ -72,8 +61,43 @@ export async function loadQuestionPacks(): Promise<LoadedPack[]> {
   return packs;
 }
 
-export async function loadQuestionBank() {
-  const packs = await loadQuestionPacks();
+export async function loadQuestionPacksFromFiles(): Promise<LoadedPack[]> {
+  const files = (await Promise.all(CONTENT_DIRECTORIES.map(listJsonFiles))).flat();
+  const packs = await Promise.all(
+    files.map(async (sourcePath) => {
+      const raw = await fs.readFile(path.join(process.cwd(), sourcePath), "utf8");
+      const parsed = questionPackSchema.parse(JSON.parse(raw));
+      return {
+        ...parsed,
+        sourcePath
+      };
+    })
+  );
+
+  return assertUniquePackIds(packs);
+}
+
+export async function loadQuestionPacks(): Promise<LoadedPack[]> {
+  const contentSource = process.env.CONTENT_SOURCE ?? "auto";
+
+  if (contentSource === "files") {
+    return loadQuestionPacksFromFiles();
+  }
+
+  const supabasePacks = await loadQuestionPacksFromSupabase();
+
+  if (supabasePacks?.length) {
+    return assertUniquePackIds(supabasePacks);
+  }
+
+  if (contentSource === "supabase") {
+    throw new Error("CONTENT_SOURCE=supabase pero no hay packs cargados en Supabase.");
+  }
+
+  return loadQuestionPacksFromFiles();
+}
+
+export function createQuestionBank(packs: LoadedPack[]) {
   const questions: LoadedQuestion[] = packs.flatMap((pack) => {
     const topicsById = new Map(pack.topics.map((topic) => [topic.id, topic]));
 
@@ -101,6 +125,14 @@ export async function loadQuestionBank() {
     packs,
     questions
   };
+}
+
+export async function loadQuestionBank() {
+  return createQuestionBank(await loadQuestionPacks());
+}
+
+export async function loadQuestionBankFromFiles() {
+  return createQuestionBank(await loadQuestionPacksFromFiles());
 }
 
 export async function loadPublicQuestions(): Promise<PublicQuestion[]> {

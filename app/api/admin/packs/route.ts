@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { loadQuestionPacks } from "@/lib/content/loader";
 import { questionPackSchema } from "@/lib/content/schema";
 import { assertSafeContentPath, saveContentFile } from "@/lib/admin/github";
+import { upsertQuestionPackToSupabase } from "@/lib/content/supabase-store";
 
 function requireAdmin(request: Request) {
   const expected = process.env.ADMIN_SECRET;
@@ -50,10 +51,12 @@ export async function POST(request: Request) {
     const filePath = assertSafeContentPath(body.filePath);
     const pack = questionPackSchema.parse(body.pack);
     const result = await saveContentFile(filePath, serializeJson(pack));
+    const contentSync = await upsertQuestionPackToSupabase(pack, filePath);
 
     return NextResponse.json({
       ok: true,
-      result
+      result,
+      contentSync
     });
   } catch (error) {
     return NextResponse.json(

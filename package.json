@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run validate:content",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -12,6 +13,7 @@
     "test:importer": "tsx --test tests/pdf-importer.test.ts",
     "typecheck": "tsc --noEmit",
     "validate:content": "tsx scripts/validate-content.ts",
+    "sync:content:supabase": "tsx scripts/sync-content-supabase.ts",
     "import:pdf": "tsx scripts/import-pdf.ts"
   },
   "dependencies": {

@@ -42,6 +42,17 @@ create table if not exists public.exam_sessions (
 create index if not exists exam_sessions_profile_created_idx
   on public.exam_sessions(profile_id, created_at desc);
 
+create table if not exists public.question_packs (
+  id text primary key,
+  source_path text not null unique,
+  pack jsonb not null,
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists question_packs_updated_idx
+  on public.question_packs(updated_at desc);
+
 alter table public.profiles enable row level security;
 alter table public.attempts enable row level security;
 alter table public.exam_sessions enable row level security;
+alter table public.question_packs enable row level security;

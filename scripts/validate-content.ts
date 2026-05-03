@@ -1,7 +1,7 @@
-import { loadQuestionBank } from "../lib/content/loader";
+import { loadQuestionBankFromFiles } from "../lib/content/loader";
 
 try {
-  const bank = await loadQuestionBank();
+  const bank = await loadQuestionBankFromFiles();
   console.log(
     `Contenido válido: ${bank.packs.length} packs, ${bank.questions.length} preguntas.`
   );

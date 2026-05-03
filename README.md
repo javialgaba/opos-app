@@ -34,6 +34,14 @@ SUPABASE_SERVICE_ROLE_KEY="..."
 
 Si no configuras Supabase, la app usa memoria temporal para pruebas locales.
 
+La misma base de datos puede funcionar como espejo runtime de las preguntas. Los JSON siguen siendo la fuente de verdad, pero puedes volcarlos a Supabase con:
+
+```bash
+npm run sync:content:supabase
+```
+
+La app usa `CONTENT_SOURCE="auto"` por defecto: si la tabla `question_packs` tiene datos, lee desde Supabase; si no, cae a los JSON del repo. Usa `CONTENT_SOURCE="files"` para forzar JSON o `CONTENT_SOURCE="supabase"` para fallar si Supabase no tiene preguntas.
+
 ## Preguntas
 
 Los packs JSON viven en:
@@ -102,3 +110,42 @@ En desarrollo, si quieres que el admin escriba directamente en el sistema de arc
 ```bash
 ALLOW_LOCAL_CONTENT_WRITES="true"
 ```
+
+## Despliegue en Vercel
+
+La aplicación está pensada para desplegarse como proyecto Next.js conectado al repositorio de GitHub.
+
+Antes de subir:
+
+```bash
+npm run test
+npm run validate:content
+npm run typecheck
+npm run lint
+npm run build
+```
+
+En Vercel, crea un proyecto desde el repositorio y deja los comandos por defecto de Next.js:
+
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: `.next`
+
+Configura estas variables en Vercel para Production y Preview:
+
+```bash
+NEXT_PUBLIC_APP_NAME="Opos App"
+SUPABASE_URL="..."
+SUPABASE_SERVICE_ROLE_KEY="..."
+ADMIN_SECRET="..."
+GITHUB_TOKEN="..."
+GITHUB_OWNER="..."
+GITHUB_REPO="..."
+GITHUB_BRANCH="main"
+ALLOW_LOCAL_CONTENT_WRITES="false"
+CONTENT_SOURCE="auto"
+```
+
+No subas `.env.local` al repositorio. En producción, `ALLOW_LOCAL_CONTENT_WRITES` debe quedar en `false`: Vercel no debe usarse como almacenamiento editable. El admin guardará los cambios haciendo commit en GitHub y el despliegue se actualizará cuando Vercel reciba el cambio del repositorio.
+
+El token de GitHub debe permitir leer y escribir contenidos del repositorio. Para un token fine-grained, dale acceso solo a este repositorio y permisos `Contents: Read and write`.
