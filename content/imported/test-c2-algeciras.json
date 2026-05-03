@@ -1,0 +1,4312 @@
+{
+  "formatVersion": 1,
+  "id": "c2-ayto-algeciras",
+  "opposition": {
+    "id": "c2",
+    "name": "C2"
+  },
+  "title": "c2-ayto-algeciras",
+  "scoring": {
+    "correct": 1,
+    "wrong": -0.33,
+    "blank": 0
+  },
+  "topics": [
+    {
+      "id": "ayuntamiento-algeciras",
+      "name": "Ayuntamiento Algeciras"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c2-ayto-algeciras-001",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "La aprobación de la Constitución tuvo lugar mediante:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sesión conjunta del Congreso y Senado el mismo día."
+        },
+        {
+          "id": "B",
+          "text": "Sesión conjunta del Congreso y Senado en distinto día."
+        },
+        {
+          "id": "C",
+          "text": "Sesiones separadas del Congreso y Senado el mismo día."
+        },
+        {
+          "id": "D",
+          "text": "Sesiones separadas del Congreso y Senado en distinto día."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "1"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "35"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "88"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-002",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "¿Qué parte de la Constitución Española de 1978 no tiene fuerza jurídica?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Todas las partes de la Constitución tienen fuerza jurídica."
+        },
+        {
+          "id": "B",
+          "text": "Las Disposiciones Adicionales."
+        },
+        {
+          "id": "C",
+          "text": "El Título Preliminar."
+        },
+        {
+          "id": "D",
+          "text": "El Preámbulo."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "2"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "36"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "89"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-003",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Los derechos fundamentales y las libertades públicas de la Constitución se insertan:",
+      "options": [
+        {
+          "id": "A",
+          "text": "En su parte dogmática."
+        },
+        {
+          "id": "B",
+          "text": "En su parte orgánica."
+        },
+        {
+          "id": "C",
+          "text": "Los derechos fundamentales en su parte dogmática y las libertades públicas en su parte orgánica."
+        },
+        {
+          "id": "D",
+          "text": "Los derechos fundamentales en su parte orgánica y las libertades públicas en su parte dogmática."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "3"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "37"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "90"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-004",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "¿Qué Capítulo del Título Primero de la Constitución se subdivide a su vez en Secciones?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Capítulo Primero,"
+        },
+        {
+          "id": "B",
+          "text": "El Capítulo Segundo."
+        },
+        {
+          "id": "C",
+          "text": "El Capítulo Tercero."
+        },
+        {
+          "id": "D",
+          "text": "El Capítulo Cuarto."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "4"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "38"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "91"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-005",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "La Corona de España viene regulada en la Constitución de 1978 con el epígrafe «De la Corona»:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enel Preámbulo."
+        },
+        {
+          "id": "B",
+          "text": "En el Título Preliminar."
+        },
+        {
+          "id": "C",
+          "text": "Enel Título ll, arts. 56 a 65."
+        },
+        {
+          "id": "D",
+          "text": "En el Título 1, arts. 1 a 9."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "5"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "39"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "92"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-006",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "El Rey asume la más alta representación del Estado español:",
+      "options": [
+        {
+          "id": "A",
+          "text": "En las relaciones internacionales."
+        },
+        {
+          "id": "B",
+          "text": "En las relaciones internacionales, especialmente con las naciones de su comunidad histórica."
+        },
+        {
+          "id": "C",
+          "text": "En todo tipo de relaciones de carácter público."
+        },
+        {
+          "id": "D",
+          "text": "En determinadas relaciones internacionales."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "6"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "40"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "93"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-007",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "El Rey, además de las funciones que expresamente tiene atribuidas en la Constitución y las leyes, puede asumir:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las funciones que le encomiende el Gobierno."
+        },
+        {
+          "id": "B",
+          "text": "Las funciones que le encomiende el Presidente del Gobierno."
+        },
+        {
+          "id": "C",
+          "text": "Las funciones que le encomiende el Congreso."
+        },
+        {
+          "id": "D",
+          "text": "No puede asumir otras funciones."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "7"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "41"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "94"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-008",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En relación con la composición del Consejo General del Poder Judicial (CGPJ), según la Constitución Española, señale la opción correcta:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Está integrado por el Presidente del Tribunal Supremo, que lo preside, y por veinte miembros nombrados por el Rey por un período de cinco años."
+        },
+        {
+          "id": "B",
+          "text": "Está integrado por el Presidente del Tribunal Constitucional, que lo preside, y por veinte miembros elegidos por sufragio universal por un período de cuatro años."
+        },
+        {
+          "id": "C",
+          "text": "Está integrado por el Presidente del Tribunal Supremo, que lo preside, y por doce miembros nombrados por el Rey por un período de seis años."
+        },
+        {
+          "id": "D",
+          "text": "Está integrado por el Presidente de la Audiencia Nacional, que lo preside, y por veinte miembros"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "8"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "42"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "95"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-009",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según el artículo 122.3 de la Constitución Española, ¿cómo se determina el origen profesional de los veinte miembros del CGPJ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diez entre Jueces y Magistrados, y diez entre Abogados y otros juristas, con más de diez años de ejercicio profesional."
+        },
+        {
+          "id": "B",
+          "text": "Doce entre Jueces y Magistrados de todas las categorías judiciales, en los términos que establezca la ley orgánica; y ocho entre Abogados y otros juristas, todos ellos de reconocida competencia y con más de quince años de ejercicio profesional."
+        },
+        {
+          "id": "C",
+          "text": "Doce entre Abogados y otros juristas, y ocho entre Jueces y Magistrados, con más de quince años de ejercicio profesional."
+        },
+        {
+          "id": "D",
+          "text": "Veinte entre Jueces y Magistrados de todas las categorías judiciales, en los términos que establezca la"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "9"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "43"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "96"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-010",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Las Cortes Generales, conforme a la Constitución Española, se caracterizan porque:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Representan al Gobierno de la Nación y están formadas por el Congreso de los Diputados y el Senado."
+        },
+        {
+          "id": "B",
+          "text": "Representan al pueblo español y están formadas por el Congreso de los Diputados y el Consejo de Estado."
+        },
+        {
+          "id": "C",
+          "text": "Representan a las Comunidades Autónomas y están formadas por el Congreso de los Diputados y del Senado."
+        },
+        {
+          "id": "D",
+          "text": "Representan al pueblo español y están formadas por el Congreso de los Diputados y el Senado."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "10"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "44"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "97"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-011",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Constitución Española, los períodos ordinarios de sesiones de las Cámaras son:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dos al año: de septiembre a diciembre y de febrero a junio."
+        },
+        {
+          "id": "B",
+          "text": "Uno al año: de enero a diciembre, sin interrupción."
+        },
+        {
+          "id": "C",
+          "text": "Dos al año: de enero a junio y de septiembre a diciembre."
+        },
+        {
+          "id": "D",
+          "text": "Tres al año: de enero a marzo, de abril a junio y de septiembre a diciembre."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "11"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "45"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "98"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-012",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 50/1997, de 27 de noviembre, del Gobierno, el Gobierno se compone de:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Presidente, los Secretarios de Estado y los Ministros."
+        },
+        {
+          "id": "B",
+          "text": "El Presidente, los Ministros y los Subsecretarios."
+        },
+        {
+          "id": "C",
+          "text": "El Presidente, el Vicepresidente o Vicepresidentes, en su caso, y los Ministros."
+        },
+        {
+          "id": "D",
+          "text": "El Presidente, el Vicepresidente o Vicepresidentes y los Diputados designados por el Congreso."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "12"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "46"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "99"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-013",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Constitución Española, el Gobierno cesa:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tras la celebración de elecciones generales, en los casos de pérdida de la confianza parlamentaria o por dimisión o fallecimiento de su Presidente."
+        },
+        {
+          "id": "B",
+          "text": "Únicamente por dimisión del Presidente del Gobierno."
+        },
+        {
+          "id": "C",
+          "text": "Automáticamente cuando se aprueban los Presupuestos Generales del Estado."
+        },
+        {
+          "id": "D",
+          "text": "Cuando el Senado rechaza un proyecto de ley remitido por el Congreso."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "13"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "47"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "100"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-014",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 7/1985, de 2 de abril, reguladora de las Bases del Régimen Local (LBRL), son Entidades Locales territoriales:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Municipio, la Provincia y la Isla en los archipiélagos balear y canario."
+        },
+        {
+          "id": "B",
+          "text": "El Municipio, la Comarca y la Universidad pública."
+        },
+        {
+          "id": "C",
+          "text": "La Provincia, la Comunidad Autónoma y el Consejo de Estado."
+        },
+        {
+          "id": "D",
+          "text": "El Municipio, la Mancomunidad y el Tribunal de Cuentas."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "14"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "88"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "1"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-015",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley 7/1985 (LBRL), son elementos del Municipio:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El territorio, el presupuesto y el alcalde."
+        },
+        {
+          "id": "B",
+          "text": "La provincia, la población y el término municipal."
+        },
+        {
+          "id": "C",
+          "text": "La población, el pleno y la comunidad autónoma."
+        },
+        {
+          "id": "D",
+          "text": "El territorio, la población y la organización."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "15"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "89"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "2"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-016",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 7/1985, de 2 de abril (LBRL), el Municipio se define como:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La entidad local básica de la organización territorial del Estado, con personalidad jurídica y plena capacidad para el cumplimiento de sus fines."
+        },
+        {
+          "id": "B",
+          "text": "Una entidad administrativa sin personalidad jurídica, integrada necesariamente en la Diputación Provincial."
+        },
+        {
+          "id": "C",
+          "text": "Una circunscripción territorial creada exclusivamente por ley orgánica."
+        },
+        {
+          "id": "D",
+          "text": "Una entidad local supramunicipal integrada por municipios, con personalidad jurídica propia."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "16"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "90"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "3"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-017",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En materia de responsabilidad patrimonial, conforme a la Ley 39/2015, el derecho a reclamar prescribe:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Al año de producido el hecho o acto que motive la indemnización o de manifestarse su efecto lesivo; en daños físicos o psíquicos, desde la curación o determinación del alcance de las secuelas."
+        },
+        {
+          "id": "B",
+          "text": "A los cuatro años, en todo caso, desde la fecha del hecho dañoso."
+        },
+        {
+          "id": "C",
+          "text": "A los seis meses desde la notificación del acto administrativo causante del daño, siempre."
+        },
+        {
+          "id": "D",
+          "text": "No prescribe nunca, por tratarse de un derecho constitucional."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "17"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "91"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "4"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-018",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley de Bases del Régimen Local (LBRL), el “término municipal” es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El territorio en que el ayuntamiento ejerce sus competencias."
+        },
+        {
+          "id": "B",
+          "text": "La relación de vecinos inscritos en el padrón municipal."
+        },
+        {
+          "id": "C",
+          "text": "La demarcación electoral utilizada para elegir al Congreso de los Diputados."
+        },
+        {
+          "id": "D",
+          "text": "El conjunto de edificios y bienes municipales."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "18"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "92"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "5"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-019",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley de Bases del Régimen Local (LBRL), un cambio de denominación de un municipio solo tendrá carácter oficial cuando:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sea aprobado por el alcalde mediante bando y publicado en el tablón de anuncios municipal."
+        },
+        {
+          "id": "B",
+          "text": "Lo apruebe la Diputación Provincial y se publique en el boletín oficial de la provincia."
+        },
+        {
+          "id": "C",
+          "text": "Se acuerde por el pleno, sin necesidad de publicación posterior."
+        },
+        {
+          "id": "D",
+          "text": "Tras anotarse en el Registro estatal correspondiente, se publique en el «Boletín Oficial del Estado»."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "19"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "93"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "6"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-020",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 7/1985, de 2 de abril, reguladora de las Bases del Régimen Local (LBRL), la organización municipal responde, entre otras, a la regla de que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Alcalde y la Junta de Gobierno Local existen en todos los ayuntamientos, pero no el Pleno."
+        },
+        {
+          "id": "B",
+          "text": "El Alcalde, los Tenientes de Alcalde y el Pleno existen en todos los ayuntamientos."
+        },
+        {
+          "id": "C",
+          "text": "El Pleno solo existe en municipios con población superior a 5.000 habitantes."
+        },
+        {
+          "id": "D",
+          "text": "Los Tenientes de Alcalde solo existen en municipios capitales de provincia."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "20"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "94"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "7"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-021",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley de Bases del Régimen Local (LBRL), ¿cuál de las siguientes materias corresponde, en todo caso, al Pleno municipal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La aprobación del reglamento orgánico y de las ordenanzas."
+        },
+        {
+          "id": "B",
+          "text": "La representación del Ayuntamiento."
+        },
+        {
+          "id": "C",
+          "text": "La dirección del gobierno y de la administración municipal."
+        },
+        {
+          "id": "D",
+          "text": "La convocatoria y presidencia de las sesiones de la Junta de Gobierno Local."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "21"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "95"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "8"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-022",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según el Título X de la Ley de Bases del Régimen Local (LBRL), el régimen de organización de los municipios de gran población se aplica, entre otros supuestos:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A todos los municipios capitales de provincia, cualquiera que sea su población."
+        },
+        {
+          "id": "B",
+          "text": "A los municipios cuya población supere los 50.000 habitantes, en todo caso."
+        },
+        {
+          "id": "C",
+          "text": "Únicamente a los municipios capitales autonómicos, con independencia de otros supuestos."
+        },
+        {
+          "id": "D",
+          "text": "A los municipios cuya población supere los 250.000 habitantes."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "22"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "96"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "9"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-023",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con el Título X de la Ley de Bases del Régimen Local (LBRL), en los municipios de gran población, el número de miembros de la Junta de Gobierno Local (además del Alcalde) no podrá exceder de:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un tercio del número legal de miembros del Pleno."
+        },
+        {
+          "id": "B",
+          "text": "La mitad del número legal de miembros del Pleno."
+        },
+        {
+          "id": "C",
+          "text": "Dos tercios del número legal de miembros del Pleno."
+        },
+        {
+          "id": "D",
+          "text": "Un cuarto del número legal de miembros del Pleno."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "23"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "97"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "10"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-024",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Constitución Española, la provincia es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un órgano administrativo de la Comunidad Autónoma, sin personalidad jurídica propia."
+        },
+        {
+          "id": "B",
+          "text": "Una entidad local creada por acuerdo municipal y modificable por orden ministerial."
+        },
+        {
+          "id": "C",
+          "text": "Una entidad local supramunicipal equivalente a la comarca en todo el territorio nacional."
+        },
+        {
+          "id": "D",
+          "text": "Una entidad local con personalidad jurídica propia, determinada por la agrupación de municipios y"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "24"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "98"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "11"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-025",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 7/1985 (Ley de Bases del Régimen Local), son fines propios y específicos de la Provincia, entre otros:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ejercer la potestad legislativa en materias de régimen local."
+        },
+        {
+          "id": "B",
+          "text": "Garantizar los principios de solidaridad y equilibrio intermunicipales, asegurando la prestación integral y adecuada de los servicios municipales en todo el territorio provincial."
+        },
+        {
+          "id": "C",
+          "text": "Designar directamente a los alcaldes de los municipios de la provincia."
+        },
+        {
+          "id": "D",
+          "text": "Sustituir a los ayuntamientos en todas sus competencias de forma permanente."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "25"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "99"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "12"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-026",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley 7/1985 (Ley de Bases del Régimen Local), en todas las Diputaciones Provinciales existen necesariamente:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Presidente, los Vicepresidentes, la Junta de Gobierno y el Pleno."
+        },
+        {
+          "id": "B",
+          "text": "El Alcalde, los Tenientes de Alcalde y el Pleno."
+        },
+        {
+          "id": "C",
+          "text": "El Presidente, el Consejo Social de la Ciudad y el Pleno."
+        },
+        {
+          "id": "D",
+          "text": "El Presidente, la Comisión de Gobierno Abierto y el Senado provincial."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "26"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "100"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "13"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-027",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, el “sector público” comprende:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La Administración General del Estado, el Congreso de los Diputados, el Senado y el sector público institucional."
+        },
+        {
+          "id": "B",
+          "text": "La Administración General del Estado, las Diputaciones Provinciales y exclusivamente las sociedades mercantiles estatales."
+        },
+        {
+          "id": "C",
+          "text": "La Administración General del Estado y, en su caso, las Administraciones de las Comunidades Autónomas, excluyéndose las Entidades Locales."
+        },
+        {
+          "id": "D",
+          "text": "La Administración General del Estado, las Administraciones de las Comunidades Autónomas, las"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "27"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "1"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "54"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-028",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local, son Entidades Locales territoriales:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Municipio, la Provincia y la Isla en los archipiélagos balear y canario."
+        },
+        {
+          "id": "B",
+          "text": "El Municipio, la Comarca y el Área Metropolitana."
+        },
+        {
+          "id": "C",
+          "text": "El Municipio, la Provincia y la Comunidad Autónoma."
+        },
+        {
+          "id": "D",
+          "text": "El Municipio, la Mancomunidad y el Cabildo Insular en cualquier parte del territorio nacional."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "28"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "2"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "55"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-029",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley 40/2015, de Régimen Jurídico del Sector Público, integran el sector público institucional estatal, entre otras entidades:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los Ministerios, las Delegaciones del Gobierno y los Subdelegados del Gobierno."
+        },
+        {
+          "id": "B",
+          "text": "Los organismos autónomos, las entidades públicas empresariales y las agencias estatales."
+        },
+        {
+          "id": "C",
+          "text": "El Congreso de los Diputados, el Senado y el Tribunal Constitucional."
+        },
+        {
+          "id": "D",
+          "text": "Exclusivamente los Ayuntamientos, las Diputaciones Provinciales y las Mancomunidades."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "29"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "3"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "56"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-030",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Constitución Española, los Estatutos de Autonomía tienen la consideración de:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Norma local aprobada por el Pleno del Ayuntamiento correspondiente"
+        },
+        {
+          "id": "B",
+          "text": "Norma institucional básica de cada Comunidad Autónoma, reconocida y amparada por el Estado como parte integrante de su ordenamiento jurídico."
+        },
+        {
+          "id": "C",
+          "text": "Reglamento autonómico aprobado por el Consejo de Gobierno de la Comunidad Autónoma."
+        },
+        {
+          "id": "D",
+          "text": "Ley ordinaria estatal aprobada por las Cortes Generales."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "30"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "4"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "57"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-031",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Constitución Española, una materia que las Comunidades Autónomas pueden asumir es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ordenación del territorio, urbanismo y vivienda."
+        },
+        {
+          "id": "B",
+          "text": "Relaciones internacionales."
+        },
+        {
+          "id": "C",
+          "text": "Defensa y Fuerzas Armadas."
+        },
+        {
+          "id": "D",
+          "text": "La pesca, de acuerdo con la ordenación específica de la economía."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "31"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "5"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "58"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-032",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según el Estatuto de Autonomía para Andalucía, la Comunidad Autónoma ejerce competencias:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exclusivas, compartidas y ejecutivas."
+        },
+        {
+          "id": "B",
+          "text": "Únicamente exclusivas, sin posibilidad de competencias compartidas."
+        },
+        {
+          "id": "C",
+          "text": "Únicamente ejecutivas, sin potestad legislativa."
+        },
+        {
+          "id": "D",
+          "text": "Solo competencias delegadas por el Estado, sin competencias propias."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "32"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "6"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "59"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-033",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con el Estatuto de Autonomía para Andalucía, las “competencias compartidas” se caracterizan porque:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comprenden solo la función ejecutiva, sin posibilidad de dictar reglamentos."
+        },
+        {
+          "id": "B",
+          "text": "Comprenden la potestad legislativa plena sin bases estatales en ningún caso."
+        },
+        {
+          "id": "C",
+          "text": "Comprenden únicamente la aprobación de ordenanzas municipales."
+        },
+        {
+          "id": "D",
+          "text": "Comprenden potestad legislativa, potestad reglamentaria y función ejecutiva, en el marco de las bases"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "33"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "7"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "60"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-034",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Con respecto a la jerarquía normativa de las leyes orgánicas que regulan los Estatutos de Autonomía se puede decir que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La relación de los Estatutos de Autonomía con la Constitución es de igualdad jerárquica."
+        },
+        {
+          "id": "B",
+          "text": "La relación de los Estatutos de Autonomía con las restantes leyes estatales es de superioridad jerárquica."
+        },
+        {
+          "id": "C",
+          "text": "La relación de los Estatutos de Autonomía con las leyes y demás normas autonómicas es de clara superioridad jerárquica."
+        },
+        {
+          "id": "D",
+          "text": "La relación de los Estatutos de Autonomía con las demás leyes estatales o autonómicas es de igualdad"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "34"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "8"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "61"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-035",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Código Civil, las fuentes del ordenamiento jurídico español son:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La ley, la costumbre y los principios generales del Derecho."
+        },
+        {
+          "id": "B",
+          "text": "La Constitución, las leyes orgánicas y las leyes ordinarias."
+        },
+        {
+          "id": "C",
+          "text": "La ley, la jurisprudencia y la doctrina científica."
+        },
+        {
+          "id": "D",
+          "text": "Los reglamentos, las instrucciones y las circulares."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "35"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "9"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "62"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-036",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "El principio de jerarquía normativa está expresamente reconocido en:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El artículo 14 de la Constitución Española."
+        },
+        {
+          "id": "B",
+          "text": "El artículo 9.3 de la Constitución Española."
+        },
+        {
+          "id": "C",
+          "text": "El artículo 23 de la Constitución Española."
+        },
+        {
+          "id": "D",
+          "text": "El artículo 103.1 de la Constitución Española."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "36"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "10"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "63"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-037",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Constitución Española, la potestad reglamentaria corresponde:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exclusivamente al Congreso de los Diputados."
+        },
+        {
+          "id": "B",
+          "text": "Al Tribunal Constitucional."
+        },
+        {
+          "id": "C",
+          "text": "A las Cortes Generales en sesión conjunta."
+        },
+        {
+          "id": "D",
+          "text": "Al Gobierno."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "37"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "11"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "64"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-038",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Constitución Española, la Administración Local se regula específicamente en:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los artículos 66, 68 y 69 de la Constitución Española."
+        },
+        {
+          "id": "B",
+          "text": "Los artículos 97, 98 y 99 de la Constitución Española."
+        },
+        {
+          "id": "C",
+          "text": "Los artículos 140, 141 y 142 de la Constitución Española."
+        },
+        {
+          "id": "D",
+          "text": "Los artículos 81, 82 y 83 de la Constitución Española."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "38"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "12"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "65"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-039",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Constitución Española, la autonomía municipal se garantiza en el siguiente sentido:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los municipios carecen de personalidad jurídica propia y dependen jerárquicamente de la Diputación Provincial."
+        },
+        {
+          "id": "B",
+          "text": "La autonomía municipal solo existe si el municipio supera 20.000 habitantes."
+        },
+        {
+          "id": "C",
+          "text": "Los municipios gozan de personalidad jurídica plena y su gobierno y administración corresponde a los Ayuntamientos integrados por Alcaldes y Concejales."
+        },
+        {
+          "id": "D",
+          "text": "El gobierno municipal corresponde exclusivamente a los Concejales, sin Alcalde."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "39"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "13"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "66"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-040",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley de Bases del Régimen Local, corresponde en todo caso al Presidente de la Diputación:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aprobar y modificar los Presupuestos de la Diputación en todo caso."
+        },
+        {
+          "id": "B",
+          "text": "Integrar a todos los diputados provinciales en la Junta de Gobierno obligatoriamente."
+        },
+        {
+          "id": "C",
+          "text": "Convocar y presidir las sesiones del Pleno y de la Junta de Gobierno, y decidir los empates con voto de calidad."
+        },
+        {
+          "id": "D",
+          "text": "Nombrar y separar libremente al Interventor y al Secretario de la Diputación sin sujeción a normativa."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "40"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "14"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "67"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-041",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al texto refundido de la Ley Reguladora de las Haciendas Locales (TRLRHL), constituye un recurso de las entidades locales:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El producto de las multas y sanciones en el ámbito de sus competencias."
+        },
+        {
+          "id": "B",
+          "text": "El producto de la emisión de moneda de curso legal."
+        },
+        {
+          "id": "C",
+          "text": "Los aranceles judiciales fijados por los órganos jurisdiccionales."
+        },
+        {
+          "id": "D",
+          "text": "Los tributos propios de las Comunidades Autónomas."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "41"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "15"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "68"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-042",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según el TRLRHL (Real Decreto Legislativo 2/2004, de 5 de marzo), los acuerdos provisionales para el establecimiento o modificación de ordenanzas fiscales deben exponerse en el tablón de anuncios, como mínimo, durante:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Treinta días, dentro de los cuales los interesados pueden examinar el expediente y presentar reclamaciones."
+        },
+        {
+          "id": "B",
+          "text": "Diez días, sin posibilidad de reclamaciones."
+        },
+        {
+          "id": "C",
+          "text": "Quince días, pudiendo reclamarse solo por los concejales."
+        },
+        {
+          "id": "D",
+          "text": "Veinte días, sin necesidad de publicidad adicional."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "42"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "16"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "69"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-043",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 31/1995, la planificación de la acción preventiva en la empresa se realiza:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Únicamente cuando se produzca un accidente de trabajo."
+        },
+        {
+          "id": "B",
+          "text": "Solo a petición del trabajador afectado."
+        },
+        {
+          "id": "C",
+          "text": "Mediante ordenanza fiscal aprobada por el Ayuntamiento."
+        },
+        {
+          "id": "D",
+          "text": "A partir de una evaluación inicial de los riesgos para la seguridad y la salud de los trabajadores."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "43"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "17"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "70"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-044",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 31/1995, se entenderá por “prevención” (a efectos de la Ley):",
+      "options": [
+        {
+          "id": "A",
+          "text": "La vigilancia de la salud realizada por el personal sanitario del servicio de prevención."
+        },
+        {
+          "id": "B",
+          "text": "La reparación de los daños producidos por accidentes de trabajo y enfermedades profesionales."
+        },
+        {
+          "id": "C",
+          "text": "El conjunto de actividades o medidas adoptadas o previstas en todas las fases de actividad de la empresa con el fin de evitar o disminuir los riesgos derivados del trabajo."
+        },
+        {
+          "id": "D",
+          "text": "La imposición de sanciones por la Inspección de Trabajo y Seguridad Social."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "44"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "18"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "71"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-045",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley 31/1995, cuando exista un riesgo grave e inminente, el trabajador tiene derecho a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Interrumpir su actividad y abandonar el lugar de trabajo, en su caso, cuando considere que dicha actividad entraña un riesgo grave e inminente para su vida o su salud."
+        },
+        {
+          "id": "B",
+          "text": "Abandonar el lugar de trabajo únicamente con autorización escrita del empresario."
+        },
+        {
+          "id": "C",
+          "text": "Continuar trabajando obligatoriamente, pudiendo formular reclamación al finalizar la jornada."
+        },
+        {
+          "id": "D",
+          "text": "Interrumpir la actividad solo si así lo acuerda el Pleno del Ayuntamiento."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "45"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "19"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "72"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-046",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley Orgánica 3/2018 (LOPDGDD), el tratamiento de datos personales de un menor de edad podrá fundarse únicamente en su consentimiento cuando el menor sea:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mayor de 16 años."
+        },
+        {
+          "id": "B",
+          "text": "Mayor de 18 años."
+        },
+        {
+          "id": "C",
+          "text": "Mayor de 12 años."
+        },
+        {
+          "id": "D",
+          "text": "Mayor de 14 años."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "46"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "20"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "73"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-047",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley Orgánica de Protección de Datos Personales y Garantía de los Derechos Digitales, el derecho a la desconexión digital en el ámbito laboral corresponde a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los trabajadores y los empleados públicos, para garantizar fuera del tiempo de trabajo el respeto a su descanso, permisos y vacaciones, así como a su intimidad personal y familiar."
+        },
+        {
+          "id": "B",
+          "text": "Solo a los funcionarios de carrera, para garantizar el control de presencia."
+        },
+        {
+          "id": "C",
+          "text": "Solo a los trabajadores del sector privado, para garantizar la productividad."
+        },
+        {
+          "id": "D",
+          "text": "Únicamente a quienes teletrabajan, para garantizar la disponibilidad permanente."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "47"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "21"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "74"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-048",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 12/2007, de 26 de noviembre para la promoción de la igualdad de género en Andalucía, las Administraciones públicas de Andalucía, en materia de lenguaje e imagen pública, deben:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Limitarse a recomendar el uso no sexista del lenguaje únicamente en campañas institucionales de igualdad."
+        },
+        {
+          "id": "B",
+          "text": "Aplicar el uso no sexista del lenguaje solo en disposiciones normativas, pero no en documentos administrativos."
+        },
+        {
+          "id": "C",
+          "text": "Ajustar el lenguaje no sexista exclusivamente a los medios de comunicación públicos andaluces."
+        },
+        {
+          "id": "D",
+          "text": "Garantizar un uso no sexista del lenguaje y un tratamiento igualitario en contenidos e imágenes en sus"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "48"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "22"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "75"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-049",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "A efectos de la Ley 12/2007, de 26 de noviembre para la promoción de la igualdad de género en Andalucía, se entiende por “acoso sexual” (definición legal) como:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comportamiento verbal, no verbal o físico de índole sexual realizado por el hombre contra la mujer que tenga por objeto o produzca el efecto de atentar contra su dignidad o crear un entorno intimidatorio, hostil, degradante, humillante u ofensivo, en cu alquier ámbito, incluido el laboral."
+        },
+        {
+          "id": "B",
+          "text": "Cualquier conflicto laboral entre personas de distinto sexo, aunque no exista connotación sexual."
+        },
+        {
+          "id": "C",
+          "text": "Conductas reiteradas exclusivamente en el ámbito laboral que generen estrés, con independencia de su contenido."
+        },
+        {
+          "id": "D",
+          "text": "Cualquier comentario sobre la vida privada de una persona, aunque no sea de índole sexual."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "49"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "23"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "76"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-050",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 12/2007, , de 26 de noviembre para la promoción de la igualdad de género en Andalucía, respecto del “enfoque de género en el presupuesto” de la Comunidad Autónoma de Andalucía, es correcto afirmar que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El informe de impacto de género sobre el presupuesto lo emite exclusivamente el Parlamento de Andalucía durante el debate final."
+        },
+        {
+          "id": "B",
+          "text": "El enfoque de género se limita a subvenciones nominativas, sin afectar al proyecto de Ley del Presupuesto."
+        },
+        {
+          "id": "C",
+          "text": "La Consejería competente en materia de presupuestos, coordinada con el conjunto de Consejerías y con participación del Instituto Andaluz de la Mujer, emite el informe de evaluación de impacto de género sobre el proyecto de Ley del Presupuesto de cada ej ercicio."
+        },
+        {
+          "id": "D",
+          "text": "El informe de impacto de género se emite solo cada cuatro años, coincidiendo con el Plan Estratégico."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "50"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "24"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "77"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-051",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 13/2007, de 26 de noviembre, de medidas de promoción y protección integral contra la violencia de género , tienen la consideración de víctimas de violencia de género y tienen reconocidos los derechos de la Ley, sin necesidad de interponer denuncia:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Únicamente la mujer mayor de edad que haya presentado denuncia y obtenido orden de protección."
+        },
+        {
+          "id": "B",
+          "text": "La mujer que sufra el daño y, además, sus hijas e hijos que sufran la violencia a la que está sometida su madre, así como determinadas personas dependientes que convivan en el entorno violento y las madres cuyos hijos e hijas hayan sido asesinados."
+        },
+        {
+          "id": "C",
+          "text": "La mujer víctima y cualquier familiar hasta segundo grado, con independencia de convivencia o dependencia."
+        },
+        {
+          "id": "D",
+          "text": "La mujer y sus hijas e hijos que sufran la violencia, así como determinadas personas dependientes que"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "51"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "25"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "78"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-052",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 13/2007 de medidas de promoción y protección integral contra la violencia de género , el derecho a la información de las mujeres víctimas de violencia de género comprende, entre otros extremos:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Recibir información, asesoramiento y atención adecuada a su situación personal, así como información sobre centros, recursos y servicios de atención existentes en Andalucía."
+        },
+        {
+          "id": "B",
+          "text": "Únicamente recibir información estadística anual sobre violencia de género en Andalucía."
+        },
+        {
+          "id": "C",
+          "text": "Acceder a información solo a través de medios presenciales, quedando excluidas las nuevas tecnologías."
+        },
+        {
+          "id": "D",
+          "text": "Recibir información asesoramiento y atención adecuada a su situación personal, así como información"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "52"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "26"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "79"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-053",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 13/2007, de medidas de promoción y protección integral contra la violencia de género , los derechos reconocidos en el artículo 27.1 se extienden también a:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Únicamente a la mujer víctima, excluyéndose siempre a otras víctimas definidas por la Ley."
+        },
+        {
+          "id": "B",
+          "text": "Las víctimas a las que se refieren las letras b), c) y d) del artículo 1 bis."
+        },
+        {
+          "id": "C",
+          "text": "Solo a las hijas e hijos (letra b del art. 1 bis), quedando excluidas las restantes categorías."
+        },
+        {
+          "id": "D",
+          "text": "A cualquier persona que conviva con la mujer víctima, aunque no esté incluida en el artículo 1 bis."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "53"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "27"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "80"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-054",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, el acto administrativo se produce:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Por cualquier órgano administrativo, aunque sea incompetente, siempre que exista urgencia."
+        },
+        {
+          "id": "B",
+          "text": "Por el órgano competente, ajustándose a los requisitos y al procedimiento establecido."
+        },
+        {
+          "id": "C",
+          "text": "Únicamente a instancia del interesado, no pudiendo dictarse de oficio."
+        },
+        {
+          "id": "D",
+          "text": "Solo mediante disposición de carácter general publicada en un boletín oficial."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "54"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "28"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "81"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-055",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, los procedimientos administrativos podrán iniciarse:",
+      "options": [
+        {
+          "id": "A",
+          "text": "De oficio o a solicitud del interesado."
+        },
+        {
+          "id": "B",
+          "text": "Solo de oficio, salvo en los procedimientos sancionadores."
+        },
+        {
+          "id": "C",
+          "text": "Solo a solicitud del interesado, salvo en los procedimientos de urgencia."
+        },
+        {
+          "id": "D",
+          "text": "Únicamente por denuncia, en cualquier tipo de procedimiento."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "55"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "29"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "82"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-056",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En el cómputo de plazos administrativos, salvo que una Ley o el Derecho de la Unión Europea dispongan otra cosa, cuando el plazo se señale por días:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se entiende siempre por días naturales, incluyendo sábados, domingos y festivos."
+        },
+        {
+          "id": "B",
+          "text": "Se entiende que son hábiles, excluyéndose sábados, domingos y festivos."
+        },
+        {
+          "id": "C",
+          "text": "Se excluyen solo los domingos y festivos, pero se incluyen los sábados."
+        },
+        {
+          "id": "D",
+          "text": "Se cuentan desde el mismo día de la notificación, sin excepción."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "56"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "30"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "83"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-057",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas es nulo de pleno derecho el acto administrativo:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Que incurre en cualquier infracción del ordenamiento jurídico, aunque sea leve."
+        },
+        {
+          "id": "B",
+          "text": "Con defecto de forma, aunque no cause indefensión ni afecte a requisitos indispensables."
+        },
+        {
+          "id": "C",
+          "text": "Dictado por órgano manifiestamente incompetente por razón de la materia o del territorio."
+        },
+        {
+          "id": "D",
+          "text": "Que se ajusta al ordenamiento jurídico pero no resulta “conveniente” para la Administración."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "57"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "31"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "84"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-058",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, ¿cuál de los siguientes actos/decisiones pone fin a la vía administrativa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La resolución de un recurso de alzada."
+        },
+        {
+          "id": "B",
+          "text": "El acuerdo de iniciación de un procedimiento sancionador."
+        },
+        {
+          "id": "C",
+          "text": "Una propuesta de resolución del órgano instructor."
+        },
+        {
+          "id": "D",
+          "text": "Un informe preceptivo emitido en la fase de instrucción."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "58"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "32"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "85"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-059",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Respecto de la suspensión de la ejecución del acto impugnado al interponer un recurso administrativo, señale la afirmación correcta:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La mera interposición del recurso suspende automáticamente la ejecución del acto, como regla general."
+        },
+        {
+          "id": "B",
+          "text": "Puede acordarse la suspensión, de oficio o a solicitud del recurrente, si la ejecución puede causar perjuicios de imposible o difícil reparación."
+        },
+        {
+          "id": "C",
+          "text": "Solo puede acordarse suspensión si el recurrente presta caución, en todo caso y sin excepción."
+        },
+        {
+          "id": "D",
+          "text": "Si se solicita la suspensión, nunca opera ningún efecto por falta de resolución administrativa, debiendo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "59"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "33"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "86"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-060",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En el recurso de alzada, el plazo de interposición y el plazo máximo para resolver y notificar son, respectivamente:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Interposición: 15 días; Resolución: 1 mes."
+        },
+        {
+          "id": "B",
+          "text": "Interposición: 1 mes si el acto es expreso; Resolución: 3 meses."
+        },
+        {
+          "id": "C",
+          "text": "Interposición: 2 meses; Resolución: 6 meses."
+        },
+        {
+          "id": "D",
+          "text": "Interposición: 1 mes; Resolución: 1 mes."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "60"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "34"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "87"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-061",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Sobre la audiencia a los interesados y el alcance de la resolución del recurso administrativo, señale la opción correcta:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Siempre debe abrirse trámite de audiencia en los recursos, aunque no existan hechos o documentos nuevos."
+        },
+        {
+          "id": "B",
+          "text": "Si hay nuevos hechos o documentos no incluidos en el expediente originario, se ponen de manifiesto por un plazo entre 10 y 15 días para alegaciones."
+        },
+        {
+          "id": "C",
+          "text": "El órgano que resuelve el recurso solo puede pronunciarse sobre las cuestiones alegadas por el recurrente, quedándole prohibido apreciar de oficio motivos no invocados."
+        },
+        {
+          "id": "D",
+          "text": "La resolución puede agravar la situación inicial del recurrente si se aprecia una infracción más grave."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "61"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "48"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "14"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-062",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, un acto administrativo deberá ser motivado, entre otros supuestos, cuando:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Acuerde la ampliación de plazos a solicitud del interesado."
+        },
+        {
+          "id": "B",
+          "text": "Se limite a reproducir literalmente un dictamen de un órgano consultivo."
+        },
+        {
+          "id": "C",
+          "text": "Los actos que rechacen pruebas propuestas por los inrteresados."
+        },
+        {
+          "id": "D",
+          "text": "Se dicte en un procedimiento iniciado a solicitud del interesado, cualquiera que sea su contenido."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "62"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "49"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "15"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-063",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Respecto de la notificación de los actos administrativos, señale la afirmación correcta conforme a la Ley 39/2015 del Procedimiento Administrativo Común de las Administraciones Públicas:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La notificación deberá contener el texto íntegro de la resolución, con indicación de si pone fin o no a la vía administrativa, los recursos que procedan y el plazo para interponerlos."
+        },
+        {
+          "id": "B",
+          "text": "La notificación es válida aunque omita el plazo para recurrir, siempre que incluya el texto íntegro."
+        },
+        {
+          "id": "C",
+          "text": "La notificación debe practicarse necesariamente mediante publicación en boletín oficial, salvo que el interesado se oponga."
+        },
+        {
+          "id": "D",
+          "text": "La notificación puede sustituirse siempre por una comunicación informal (correo electrónico no"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "63"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "50"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "16"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-064",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En materia de eficacia de los actos administrativos, conforme a la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas señale la opción correcta:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los actos producen efectos desde la fecha en que se dicten, salvo que en ellos se disponga otra cosa."
+        },
+        {
+          "id": "B",
+          "text": "Los actos producen efectos siempre desde su publicación en el boletín oficial correspondiente."
+        },
+        {
+          "id": "C",
+          "text": "Los actos producen efectos desde su notificación en todo caso, sin excepciones."
+        },
+        {
+          "id": "D",
+          "text": "Los actos nunca pueden tener eficacia retroactiva."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "64"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "51"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "17"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-065",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, indique cuál de los siguientes supuestos determina la anulabilidad del acto administrativo:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Actos que lesionen derechos y libertades susceptibles de amparo constitucional."
+        },
+        {
+          "id": "B",
+          "text": "Actos dictados por órgano manifiestamente incompetente por razón de la materia o del territorio."
+        },
+        {
+          "id": "C",
+          "text": "Actos que incurran en cualquier infracción del ordenamiento jurídico, incluso la desviación de poder, salvo que sean nulos de pleno derecho."
+        },
+        {
+          "id": "D",
+          "text": "Actos presuntos contrarios al ordenamiento jurídico por los que se adquieren facultades cuando se"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "65"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "52"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "18"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-066",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al art. 49 de la Ley 7/1985 (Ley de Bases del Régimen Local), si tras la aprobación inicial de una ordenanza local no se presenta ninguna reclamación o sugerencia durante el trámite de información pública, el acuerdo:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Queda automáticamente sin efecto y debe reiniciarse el procedimiento con nueva aprobación inicial."
+        },
+        {
+          "id": "B",
+          "text": "Se entiende definitivamente adoptado el acuerdo hasta entonces provisional."
+        },
+        {
+          "id": "C",
+          "text": "Requiere aprobación definitiva por la Junta de Gobierno Local, en todo caso."
+        },
+        {
+          "id": "D",
+          "text": "Solo puede aprobarse definitivamente mediante referéndum local."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "66"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "53"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "19"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-067",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En relación con la convocatoria de las sesiones del Pleno, señale la opción correcta según la Ley de Bases del Régimen Local:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las sesiones plenarias han de convocarse, como mínimo, con dos días hábiles de antelación, salvo las extraordinarias urgentes."
+        },
+        {
+          "id": "B",
+          "text": "Las sesiones plenarias ordinarias pueden convocarse sin antelación mínima si se notifica el mismo día."
+        },
+        {
+          "id": "C",
+          "text": "La documentación íntegra de los asuntos del orden del día solo debe estar disponible para los concejales desde 24 horas antes de la sesión."
+        },
+        {
+          "id": "D",
+          "text": "La convocatoria del Pleno corresponde al Secretario de la Corporación, que fija también el orden del"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "67"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "54"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "20"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-068",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con el Rel Decreto 2568/1986 por el que se aprueba el Reglamento de Organización, Funcionamiento y Régimen Jurídico de las Entidades Locales, respecto del orden del día del Pleno, es correcto afirmar que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solo pueden incluirse asuntos previamente dictaminados/informados por la Comisión Informativa competente, salvo inclusión por urgencia debidamente motivada y ratificada por el Pleno."
+        },
+        {
+          "id": "B",
+          "text": "El orden del día es fijado exclusivamente por los portavoces de los grupos políticos."
+        },
+        {
+          "id": "C",
+          "text": "En las sesiones ordinarias no es obligatorio incluir el punto de ruegos y preguntas."
+        },
+        {
+          "id": "D",
+          "text": "Son válidos los acuerdos adoptados en sesión extraordinaria sobre asuntos no comprendidos en su"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "68"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "55"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "21"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-069",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Rel Decreto 2568/1986 por el que se aprueba el Reglamento de Organización, Funcionamiento y Régimen Jurídico de las Entidades Locales, respecto de las certificaciones de acuerdos y resoluciones de órganos locales, es correcto que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "No pueden expedirse certificaciones hasta que el acta esté aprobada, en todo caso."
+        },
+        {
+          "id": "B",
+          "text": "Pueden expedirse certificaciones antes de aprobarse el acta, siempre que se haga constar la advertencia o salvedad correspondiente y “a reserva” de lo que resulte de la aprobación del acta."
+        },
+        {
+          "id": "C",
+          "text": "Las certificaciones se expiden siempre sin advertencias, porque el acuerdo es inalterable aunque el acta no esté aprobada."
+        },
+        {
+          "id": "D",
+          "text": "Solo pueden expedirse certificaciones de acuerdos del Pleno, nunca de otros órganos de gobierno y"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "69"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "56"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "22"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-070",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, la presentación de solicitudes, escritos y comunicaciones dirigidos a las Administraciones Públicas podrá realizarse:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exclusivamente en el registro electrónico de la Administración competente para su tramitación."
+        },
+        {
+          "id": "B",
+          "text": "En el registro electrónico de la Administración u Organismo al que se dirijan, así como en los restantes registros electrónicos previstos legalmente (incluido el de la Administración General del Estado y el de cualquier Administración autonómica o local adherida/interconectada)."
+        },
+        {
+          "id": "C",
+          "text": "Únicamente en oficinas de Correos mediante sobre abierto y con acuse de recibo."
+        },
+        {
+          "id": "D",
+          "text": "Solo de forma presencial, salvo para las personas jurídicas."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "70"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "57"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "23"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-071",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En relación con los registros electrónicos, conforme a la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, el asiento registral deberá incluir, como mínimo:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fecha y hora de presentación, número de registro, identidad de la persona interesada, órgano administrativo remitente (si procede) y destinatario, y referencia al contenido del documento."
+        },
+        {
+          "id": "B",
+          "text": "Únicamente la fecha de presentación y el nombre del interesado, sin más datos, por razones de protección de datos."
+        },
+        {
+          "id": "C",
+          "text": "Exclusivamente el número de registro y el órgano destinatario, sin indicación de fecha y hora."
+        },
+        {
+          "id": "D",
+          "text": "Solo la firma del empleado público que recibe el escrito, sin identificación del interesado."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "71"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "58"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "24"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-072",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, cuando una notificación electrónica se pone a disposición del interesado en la sede electrónica o en la dirección electrónica habilitada única, se entenderá rechazada si:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Transcurren 10 días hábiles desde la puesta a disposición sin que se acceda a su contenido."
+        },
+        {
+          "id": "B",
+          "text": "Transcurren 5 días naturales desde la remisión del aviso por correo electrónico."
+        },
+        {
+          "id": "C",
+          "text": "No se abre el mensaje de aviso, con independencia del tiempo transcurrido."
+        },
+        {
+          "id": "D",
+          "text": "Transcurren 10 días naturales desde la puesta a disposición sin que se acceda a su contenido."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "72"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "59"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "25"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-073",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En materia de archivos y ordenación documental, señale la afirmación jurídicamente correcta:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El principio de procedencia implica que los documentos deben organizarse atendiendo a la institución o persona que los produjo, manteniendo la agrupación de los fondos por su origen."
+        },
+        {
+          "id": "B",
+          "text": "El principio de procedencia obliga a ordenar los documentos únicamente por orden alfabético de materias, con independencia de su origen administrativo."
+        },
+        {
+          "id": "C",
+          "text": "El derecho de acceso a archivos y registros es absoluto y no admite límites por razones de protección de datos o seguridad."
+        },
+        {
+          "id": "D",
+          "text": "Los archivos “históricos” son exclusivamente los que custodian documentos del año en curso."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "73"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "60"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "26"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-074",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Real Decreto Legislativo 2/2004, por el que se aprueba el Texto Refundido de la Ley Reguladora de las Haciendas Locales , el presupuesto general de una entidad local integra necesariamente:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El presupuesto de la propia entidad y, exclusivamente, los de sus organismos autónomos, quedando excluidas las sociedades mercantiles."
+        },
+        {
+          "id": "B",
+          "text": "Únicamente el presupuesto de la entidad local, sin integración de presupuestos de entes dependientes."
+        },
+        {
+          "id": "C",
+          "text": "El presupuesto de la entidad local y los de las entidades privadas concesionarias de servicios municipales."
+        },
+        {
+          "id": "D",
+          "text": "El presupuesto de la propia entidad, los de sus organismos autónomos y los estados de previsión de"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "74"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "61"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "27"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-075",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En relación con la elaboración y aprobación del presupuesto general, es correcto afirmar que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Presidente remite el presupuesto general al Pleno antes del 1 de marzo y, tras la aprobación inicial, se expone al público por 30 días; si no hay reclamaciones, debe aprobarse definitivamente por acuerdo expreso del Pleno."
+        },
+        {
+          "id": "B",
+          "text": "El Presidente remite el presupuesto general al Pleno antes del 15 de octubre y, tras la aprobación inicial, se expone al público por 15 días; si no hay reclamaciones, queda definitivamente aprobado."
+        },
+        {
+          "id": "C",
+          "text": "El presupuesto se aprueba inicialmente por la Junta de Gobierno Local y se aprueba definitivamente por Decreto de Alcaldía, sin exposición pública."
+        },
+        {
+          "id": "D",
+          "text": "El presupuesto se aprueba por el Pleno, pero no está sujeto a información pública ni a reclamaciones."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "75"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "62"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "28"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-076",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En materia de modificaciones presupuestarias, procede la tramitación de un crédito extraordinario o un suplemento de crédito cuando:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Haya que realizar un gasto que no pueda demorarse al ejercicio siguiente y no exista crédito (crédito extraordinario) o el crédito sea insuficiente y no ampliable (suplemento)."
+        },
+        {
+          "id": "B",
+          "text": "Se pretende redistribuir créditos entre aplicaciones sin variar el total del presupuesto, cualquiera que sea el caso."
+        },
+        {
+          "id": "C",
+          "text": "Se trate de un gasto plurianual que excede de los límites legales, pudiendo aprobarse siempre por decreto del Presidente."
+        },
+        {
+          "id": "D",
+          "text": "Se advierta que los ingresos previstos son inferiores a los reales, pudiendo aumentarse el gasto sin"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "76"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "63"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "29"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-077",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Texto Refundido del Estatuto Básico del Empleado Público (TREBEP), tiene la condición de funcionario de carrera quien:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Presta servicios en una Administración Pública mediante contrato de trabajo indefinido."
+        },
+        {
+          "id": "B",
+          "text": "Ocupa un puesto de confianza o asesoramiento especial, nombrado y cesado libremente."
+        },
+        {
+          "id": "C",
+          "text": "En virtud de nombramiento legal, está vinculado a una Administración Pública por una relación estatutaria regulada por el Derecho Administrativo para el desempeño de servicios profesionales retribuidos de carácter permanente."
+        },
+        {
+          "id": "D",
+          "text": "Es nombrado para el desempeño de funciones propias de funcionarios de carrera por razones"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "77"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "64"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "30"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-078",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según el TREBEP, el personal eventual se caracteriza por:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ser seleccionado por oposición y adquirir la condición de funcionario de carrera."
+        },
+        {
+          "id": "B",
+          "text": "Tener una relación laboral fija, regulada por el Estatuto de los Trabajadores."
+        },
+        {
+          "id": "C",
+          "text": "Ser nombrado para sustituir transitoriamente a funcionarios de carrera durante una baja médica."
+        },
+        {
+          "id": "D",
+          "text": "Desempeñar funciones retribuidas de confianza o asesoramiento especial y ser nombrado y cesado"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "78"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "65"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "31"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-079",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Texto Refundido del Estatuto Básico del Empleado Público (TREBEP), En relación con el derecho de sindicación de los empleados públicos, la afirmación correcta es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los funcionarios públicos carecen de derecho de sindicación en cualquier caso."
+        },
+        {
+          "id": "B",
+          "text": "Solo puede sindicarse el personal laboral, pero no los funcionarios."
+        },
+        {
+          "id": "C",
+          "text": "Los empleados públicos tienen derecho a la libre sindicación en los términos previstos en la legislación aplicable."
+        },
+        {
+          "id": "D",
+          "text": "El derecho de sindicación solo es aplicable a empleados públicos del sector privado."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "79"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "66"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "32"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-080",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Conforme al Texto Refundido del Estatuto Básico del Empleado Público, el régimen disciplinario de los funcionarios se caracteriza, entre otras notas, por que:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se ejerce de acuerdo con los principios de tipicidad, irretroactividad de las disposiciones sancionadoras no favorables, proporcionalidad y presunción de inocencia."
+        },
+        {
+          "id": "B",
+          "text": "Permite sancionar sin procedimiento cuando los hechos sean notorios."
+        },
+        {
+          "id": "C",
+          "text": "Autoriza imponer sanciones por infracciones no tipificadas si así lo decide el superior jerárquico."
+        },
+        {
+          "id": "D",
+          "text": "Excluye la posibilidad de sancionar por faltas muy graves."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "80"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "67"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "33"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-081",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 7/1985, de 2 de abril (Ley de Bases del Régimen Local), los bienes comunales y demás bienes de dominio público de las Entidades Locales son:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enajenables mediante subasta pública y embargables en vía de apremio."
+        },
+        {
+          "id": "B",
+          "text": "Prescriptibles a favor de particulares si media posesión pública durante diez años."
+        },
+        {
+          "id": "C",
+          "text": "Enajenables por permuta, siempre que exista informe de Intervención."
+        },
+        {
+          "id": "D",
+          "text": "Inalienables, inembargables e imprescriptibles y no están sujetos a tributo alguno."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "81"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "68"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "34"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-082",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Reglamento de Bienes de las Entidades Locales (RD 1372/1986), la cesión gratuita de bienes inmuebles patrimoniales, como regla, solo puede realizarse:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A cualquier persona física vecina del municipio, si el Pleno lo aprueba por mayoría simple."
+        },
+        {
+          "id": "B",
+          "text": "A Entidades o Instituciones públicas para fines que redunden en beneficio de los habitantes del término municipal, y a Instituciones privadas de interés público sin ánimo de lucro."
+        },
+        {
+          "id": "C",
+          "text": "Únicamente a empresas mercantiles, mediante convenio, para fomentar el empleo local."
+        },
+        {
+          "id": "D",
+          "text": "A cualquier asociación, aunque tenga ánimo de lucro, si se justifica “interés general”."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "82"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "69"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "35"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-083",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 9/2017, de Contratos del Sector Público (LCSP), tienen la consideración de contratos menores:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los de obras con valor estimado inferior a 40.000 € y los de servicios o suministros con valor estimado inferior a 15.000 €."
+        },
+        {
+          "id": "B",
+          "text": "Los de obras con valor estimado inferior a 50.000 € y los de servicios o suministros con valor estimado inferior a 20.000 €."
+        },
+        {
+          "id": "C",
+          "text": "Cualquier contrato, cualquiera que sea su cuantía, si se adjudica directamente por razones de urgencia."
+        },
+        {
+          "id": "D",
+          "text": "Únicamente los contratos de suministro, con valor estimado inferior a 15.000 €."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "83"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "70"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "36"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-084",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En la clasificación tradicional de las formas de acción administrativa (fomento, policía y servicio público), constituye un ejemplo típico de actividad de fomento:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La imposición de una sanción por infracción de una ordenanza."
+        },
+        {
+          "id": "B",
+          "text": "La clausura de un establecimiento por incumplimiento de condiciones higiénico - sanitarias."
+        },
+        {
+          "id": "C",
+          "text": "La concesión de una subvención municipal para rehabilitación de viviendas."
+        },
+        {
+          "id": "D",
+          "text": "La prestación municipal del servicio de recogida de residuos."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "84"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "71"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "37"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-085",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Decreto de 17 de junio de 1955, por el que se aprueba el Reglamento de Servicios de las Corporaciones Locales (RSCL), cuando no exista otro procedimiento especialmente ordenado, las solicitudes de licencias:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se presentarán en el Registro general de la Corporación y, si se refieren a obras o instalaciones, deberán acompañarse de proyecto técnico con ejemplares para los organismos que deban informar."
+        },
+        {
+          "id": "B",
+          "text": "Se presentarán únicamente ante la Junta de Gobierno Local, sin necesidad de registro, y nunca exigirán proyecto técnico."
+        },
+        {
+          "id": "C",
+          "text": "Se presentarán en la Delegación del Gobierno y serán resueltas por la Comunidad Autónoma."
+        },
+        {
+          "id": "D",
+          "text": "Se presentarán verbalmente ante el Alcalde, que resolverá sin necesidad de expediente."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "85"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "72"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "38"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-086",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, el silencio administrativo en procedimientos iniciados a solicitud del interesado tiene carácter desestimatorio, entre otros supuestos, cuando:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El procedimiento se refiera a cualquier licencia municipal, sin excepciones."
+        },
+        {
+          "id": "B",
+          "text": "La estimación tuviera como consecuencia que se transfieran al solicitante o a terceros facultades relativas al dominio público o al servicio público."
+        },
+        {
+          "id": "C",
+          "text": "El interesado sea una persona física (no obligada a relacionarse electrónicamente)."
+        },
+        {
+          "id": "D",
+          "text": "La Administración haya solicitado un informe preceptivo pero no vinculante."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "86"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "73"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "39"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-087",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En materia de responsabilidad patrimonial, conforme a la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, el derecho a reclamar prescribe:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A los cuatro años, en todo caso, desde la fecha del hecho dañoso."
+        },
+        {
+          "id": "B",
+          "text": "A los seis meses desde la notificación del acto administrativo causante del daño, siempre."
+        },
+        {
+          "id": "C",
+          "text": "No prescribe nunca, por tratarse de un derecho constitucional."
+        },
+        {
+          "id": "D",
+          "text": "Al año de producido el hecho o acto que motive la indemnización o de manifestarse su efecto lesivo;"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "87"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "74"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "40"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-088",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 1/2014, de Transparencia Pública de Andalucía, en materia de publicidad activa, ¿qué obligación adicional deben cumplir las entidades locales de Andalucía?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Publicar únicamente la información económico - presupuestaria y estadística prevista en la Ley 19/2013."
+        },
+        {
+          "id": "B",
+          "text": "Publicar, además, la información cuya publicidad viene establecida en la Ley 5/2010, de Autonomía Local de Andalucía, así como las actas de las sesiones plenarias."
+        },
+        {
+          "id": "C",
+          "text": "Publicar exclusivamente las agendas institucionales de los gobiernos y las declaraciones de bienes de altos cargos de la Junta de Andalucía."
+        },
+        {
+          "id": "D",
+          "text": "Publicar las solicitudes de acceso recibidas antes de dictar resolución, para garantizar la participación"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "88"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "75"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "41"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-089",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno, en relación con el derecho de acceso a la información pública, señale la afirmación correcta:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solo pueden solicitar información quienes acrediten un interés legítimo y directo."
+        },
+        {
+          "id": "B",
+          "text": "El solicitante debe motivar siempre su solicitud; si no lo hace, puede inadmitirse."
+        },
+        {
+          "id": "C",
+          "text": "Todas las personas tienen derecho de acceso, y el solicitante no está obligado a motivar la solicitud."
+        },
+        {
+          "id": "D",
+          "text": "El derecho de acceso solo alcanza a documentos en soporte papel obrantes en archivos"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "89"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "76"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "42"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-090",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno ¿cuál es el plazo máximo para notificar la resolución que conceda o deniegue el acceso a la información pública, y en qué supuesto puede ampliarse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 días naturales; puede ampliarse 10 días si hay terceros afectados."
+        },
+        {
+          "id": "B",
+          "text": "20 días hábiles; puede ampliarse 20 días por volumen de información."
+        },
+        {
+          "id": "C",
+          "text": "1 mes desde la recepción por el órgano competente; puede ampliarse otro mes por volumen o complejidad, previa notificación al solicitante."
+        },
+        {
+          "id": "D",
+          "text": "3 meses; puede ampliarse 3 meses cuando la información se halle en soporte no electrónico."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "90"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "77"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "43"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-091",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del procedimiento administrativo común de las administraciones públicas, es un derecho de las personas en sus relaciones con las Administraciones Públicas por medios electrónicos:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ser asistidas en el uso de medios electrónicos en sus relaciones con las Administraciones Públicas."
+        },
+        {
+          "id": "B",
+          "text": "Estar obligadas a presentar cualquier solicitud exclusivamente por vía electrónica, en todo caso."
+        },
+        {
+          "id": "C",
+          "text": "Exigir que todas las notificaciones se practiquen solo en papel, sin excepción."
+        },
+        {
+          "id": "D",
+          "text": "Imponer a la Administración el uso de un certificado digital concreto elegido por el interesado."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "91"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "78"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "44"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-092",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Según la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, están obligados a relacionarse a través de medios electrónicos con las Administraciones Públicas para realizar cualquier trámite de un procedimiento administ rativo, al menos:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cualquier persona física, en todo caso."
+        },
+        {
+          "id": "B",
+          "text": "Los menores de edad, aunque actúen sin representante."
+        },
+        {
+          "id": "C",
+          "text": "Los empleados públicos, incluso cuando actúan como interesados en asuntos privados, en todo caso."
+        },
+        {
+          "id": "D",
+          "text": "Las personas jurídicas."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "92"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "79"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "45"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-093",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En LibreOffice Writer, para aplicar el mismo formato (tipo y tamaño de letra, negrita, etc.) a varios fragmentos de texto no consecutivos, la herramienta más adecuada es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Pincel de formato (clonar formato) aplicándolo repetidamente sobre cada selección."
+        },
+        {
+          "id": "B",
+          "text": "“Guardar como” y elegir un nuevo nombre de archivo."
+        },
+        {
+          "id": "C",
+          "text": "“Combinar correspondencia” seleccionando una fuente de datos."
+        },
+        {
+          "id": "D",
+          "text": "“Insertar → Tabla” y copiar el texto dentro de celdas."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "93"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "80"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "46"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-094",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En Writer, las tabulaciones se configuran principalmente desde:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Únicamente el menú “Archivo → Propiedades”."
+        },
+        {
+          "id": "B",
+          "text": "“Herramientas → Opciones → LibreOffice → Memoria”."
+        },
+        {
+          "id": "C",
+          "text": "La regla horizontal (clic para añadir y arrastrar para mover) y el cuadro de diálogo de “Párrafo → Tabulaciones”."
+        },
+        {
+          "id": "D",
+          "text": "“Insertar → Campo → Número de página”."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "94"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "81"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "47"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-095",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En LibreOffice Calc, para que un encabezado (por ejemplo, la fila 1) se repita en todas las páginas al imprimir, se utiliza:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Formato → Celdas → Alineación."
+        },
+        {
+          "id": "B",
+          "text": "Datos → Tabla dinámica → Crear."
+        },
+        {
+          "id": "C",
+          "text": "Formato → Imprimir rangos → Editar y definir “Filas a repetir”."
+        },
+        {
+          "id": "D",
+          "text": "Insertar → Encabezado y pie de página."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "95"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "82"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "48"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-096",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "¿Cuál de las siguientes referencias de celda en Calc es absoluta (no cambia al copiar la fórmula)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A1"
+        },
+        {
+          "id": "B",
+          "text": "$A$1"
+        },
+        {
+          "id": "C",
+          "text": "A$1"
+        },
+        {
+          "id": "D",
+          "text": "$A1"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "96"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "83"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "49"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-097",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Convierte 3,5 km a metros:",
+      "options": [
+        {
+          "id": "A",
+          "text": "35 m"
+        },
+        {
+          "id": "B",
+          "text": "350 m"
+        },
+        {
+          "id": "C",
+          "text": "3.500 m"
+        },
+        {
+          "id": "D",
+          "text": "35.000 m"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "97"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "84"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "50"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-098",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Un depósito rectangular mide 2 m de largo, 1,5 m de ancho y 0,8 m de alto. Su volumen es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "2,4 m³"
+        },
+        {
+          "id": "B",
+          "text": "3,0 m³"
+        },
+        {
+          "id": "C",
+          "text": "4,3 m³"
+        },
+        {
+          "id": "D",
+          "text": "24 m³"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "98"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "85"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "51"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-099",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Un suelo cuadrado tiene 6 m de lado. Su superficie es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 m²"
+        },
+        {
+          "id": "B",
+          "text": "24 m²"
+        },
+        {
+          "id": "C",
+          "text": "36 m²"
+        },
+        {
+          "id": "D",
+          "text": "60 m²"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "99"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "86"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "52"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-100",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Convierte 0,75 litros a mililitros:",
+      "options": [
+        {
+          "id": "A",
+          "text": "7,5 ml"
+        },
+        {
+          "id": "B",
+          "text": "75 ml"
+        },
+        {
+          "id": "C",
+          "text": "750 ml"
+        },
+        {
+          "id": "D",
+          "text": "7.500 ml"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "100"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "87"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "53"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-101",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Un plano está a escala 1:2.500. En el plano, una parcela mide 6,4 cm de largo. ¿Cuál es la longitud real?",
+      "options": [
+        {
+          "id": "A",
+          "text": "16 m"
+        },
+        {
+          "id": "B",
+          "text": "64 m"
+        },
+        {
+          "id": "C",
+          "text": "1.600 m"
+        },
+        {
+          "id": "D",
+          "text": "160 m"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R1"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R1"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R1"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-102",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Una habitación de 5,2 m × 3,8 m va a enlosarse con baldosas cuadradas de 40 cm de lado. Si se compra un 8% extra por cortes y roturas, ¿cuántas baldosas deben adquirirse? (Se redondea al entero superior)",
+      "options": [
+        {
+          "id": "A",
+          "text": "120"
+        },
+        {
+          "id": "B",
+          "text": "128"
+        },
+        {
+          "id": "C",
+          "text": "134"
+        },
+        {
+          "id": "D",
+          "text": "146"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R2"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R2"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R2"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-103",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Una mezcla para hormigón se prepara en proporción 1:2:3 (cemento:arena:grava) en volumen. Si se necesitan 2,4 m³ de mezcla total, ¿qué volumen de cemento se requiere?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0,24 m³"
+        },
+        {
+          "id": "B",
+          "text": "0,40 m³"
+        },
+        {
+          "id": "C",
+          "text": "0,80 m³"
+        },
+        {
+          "id": "D",
+          "text": "1,20 m³"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R3"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R3"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R3"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-104",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme al Reglamento de Servicios de las Corporaciones Locales (RSCL), cuando no exista otro procedimiento especialmente ordenado, las solicitudes de licencias:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se presentarán en el Registro general de la Corporación y, si se refieren a obras o instalaciones, deberán acompañarse de proyecto técnico con ejemplares para los organismos que deban informar."
+        },
+        {
+          "id": "B",
+          "text": "Se presentarán únicamente ante la Junta de Gobierno Local, sin necesidad de registro, y nunca exigirán proyecto técnico."
+        },
+        {
+          "id": "C",
+          "text": "Se presentarán en la Delegación del Gobierno y serán resueltas por la Comunidad Autónoma."
+        },
+        {
+          "id": "D",
+          "text": "Se presentarán verbalmente ante el Alcalde, que resolverá sin necesidad de expediente."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R4"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R4"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R4"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-105",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Conforme a la Ley 39/2015, del Procedimiento Administrativo Común de las Administraciones Públicas, el asiento en un registro electrónico deberá garantizar, como mínimo, constancia de:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Número de asiento, fecha y hora de presentación, identificación del interesado, órgano remitente (si procede), destinatario y referencia al contenido del documento."
+        },
+        {
+          "id": "B",
+          "text": "Solo el número de asiento y el órgano destinatario, por protección de datos."
+        },
+        {
+          "id": "C",
+          "text": "Únicamente la fecha (sin hora) y el nombre del interesado."
+        },
+        {
+          "id": "D",
+          "text": "La firma manuscrita del empleado público que recibe el escrito."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R5"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R5"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R5"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-106",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Sobre AutoTexto en Writer (AutoText), la afirmación correcta es:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Solo sirve para corregir faltas de ortografía automáticamente."
+        },
+        {
+          "id": "B",
+          "text": "Funciona únicamente con tablas, no con texto normal."
+        },
+        {
+          "id": "C",
+          "text": "Sustituye el uso de estilos de párrafo, por lo que deja de ser necesario aplicarlos."
+        },
+        {
+          "id": "D",
+          "text": "Permite insertar rápidamente fragmentos predefinidos de texto mediante abreviaturas y una tecla (por"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R6"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R6"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R6"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-107",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "Si en una celda de Calc se escribe la fórmula =SUMA(Hoja2.A1:Hoja2.A10), el resultado será:",
+      "options": [
+        {
+          "id": "A",
+          "text": "La suma de los valores de A1 a A10 de la hoja activa (Hoja1)."
+        },
+        {
+          "id": "B",
+          "text": "La suma de los valores de A1 a A10 de la Hoja2."
+        },
+        {
+          "id": "C",
+          "text": "El recuento de celdas no vacías entre A1 y A10 de la Hoja2."
+        },
+        {
+          "id": "D",
+          "text": "Un error, porque no se pueden referenciar celdas de otra hoja en una fórmula."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R7"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R7"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R7"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-108",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "De acuerdo con la Ley 39/2015, el expediente administrativo electrónico se caracteriza porque:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incluye un índice electrónico autenticado, cuya autenticación garantiza la integridad e inmutabilidad del expediente desde su firma y permite su recuperación."
+        },
+        {
+          "id": "B",
+          "text": "Se integra únicamente por documentos en papel foliados y sellados."
+        },
+        {
+          "id": "C",
+          "text": "No puede contener documentos que formen parte de otros expedientes distintos."
+        },
+        {
+          "id": "D",
+          "text": "No requiere ordenación de documentos y actuaciones, bastando su mera acumulación."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R8"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R8"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R8"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-109",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En Writer, “Combinar correspondencia” se utiliza principalmente para:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Generar documentos (cartas, sobres, etiquetas) a partir de una plantilla y una base de datos (lista de destinatarios)."
+        },
+        {
+          "id": "B",
+          "text": "Unir varios documentos en uno solo sin saltos de página."
+        },
+        {
+          "id": "C",
+          "text": "Corregir la ortografía de un documento en diferentes idiomas a la vez."
+        },
+        {
+          "id": "D",
+          "text": "Convertir un documento a PDF con contraseña."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R9"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R9"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R9"
+        }
+      ]
+    },
+    {
+      "id": "c2-ayto-algeciras-110",
+      "topicId": "ayuntamiento-algeciras",
+      "prompt": "En Calc, una tabla dinámica (Pivot Table) se utiliza principalmente para:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ordenar alfabéticamente una lista de datos."
+        },
+        {
+          "id": "B",
+          "text": "Resumir y analizar grandes conjuntos de datos (por ejemplo, sumar por categorías y crear totales)."
+        },
+        {
+          "id": "C",
+          "text": "Corregir automáticamente errores de escritura en las celdas."
+        },
+        {
+          "id": "D",
+          "text": "Proteger una hoja con contraseña."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "",
+      "sources": [
+        {
+          "modelId": "1",
+          "questionNumber": "R10"
+        },
+        {
+          "modelId": "2",
+          "questionNumber": "R10"
+        },
+        {
+          "modelId": "3",
+          "questionNumber": "R10"
+        }
+      ]
+    }
+  ]
+}

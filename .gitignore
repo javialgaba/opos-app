@@ -5,7 +5,7 @@ dist
 build
 .env
 .env*.local
-imports/pdfs/*
+#imports/pdfs/*
 !imports/pdfs/.gitkeep
 *.log
 .DS_Store

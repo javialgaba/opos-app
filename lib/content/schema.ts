@@ -29,7 +29,15 @@ export const questionSchema = z
     prompt: z.string().trim().min(1),
     options: z.array(optionSchema).length(4, "Cada pregunta debe tener 4 opciones."),
     correctOptionId: z.string().min(1),
-    explanation: z.string().trim().optional().default("")
+    explanation: z.string().trim().optional().default(""),
+    sources: z
+      .array(
+        z.object({
+          modelId: z.string().trim().min(1),
+          questionNumber: z.string().trim().min(1)
+        })
+      )
+      .optional()
   })
   .superRefine((question, ctx) => {
     const optionIds = new Set(question.options.map((option) => option.id));
