@@ -15,12 +15,140 @@ type MutableCandidate = CandidateQuestion & {
   explanation: string;
 };
 
+type CliOptions = {
+  pdfPath?: string;
+  noWizard: boolean;
+  oppositionName?: string;
+  oppositionId?: string;
+  packTitle?: string;
+  packId?: string;
+  topicName?: string;
+  topicId?: string;
+  wrongScore?: number;
+  outputPath?: string;
+};
+
 type PdfTextItem = {
   str?: string;
   transform?: number[];
 };
 
 const OPTION_IDS = ["A", "B", "C", "D"];
+
+function printHelp() {
+  console.log(`
+Uso:
+  npm run import:pdf -- <pdf> [opciones]
+
+Opciones:
+  --no-wizard              Genera JSON sin revisar pregunta por pregunta.
+  --opposition <nombre>    Nombre de la oposición.
+  --opposition-id <id>     ID de la oposición.
+  --title <titulo>         Título del pack.
+  --pack-id <id>           ID del pack.
+  --topic <nombre>         Tema por defecto.
+  --topic-id <id>          ID del tema por defecto.
+  --wrong <numero>         Penalización por fallo. Por defecto: -0.33.
+  --output <ruta>          Archivo JSON de salida.
+  --help                   Muestra esta ayuda.
+`);
+}
+
+function readFlagValue(args: string[], index: number, flag: string) {
+  const value = args[index + 1];
+
+  if (!value || value.startsWith("--")) {
+    throw new Error(`Falta valor para ${flag}.`);
+  }
+
+  return value;
+}
+
+function parseArgs(args: string[]): CliOptions {
+  const options: CliOptions = {
+    noWizard: false
+  };
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+
+    if (arg === "--help" || arg === "-h") {
+      printHelp();
+      process.exit(0);
+    }
+
+    if (arg === "--no-wizard" || arg === "--auto" || arg === "--yes" || arg === "-y") {
+      options.noWizard = true;
+      continue;
+    }
+
+    if (arg === "--opposition") {
+      options.oppositionName = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--opposition-id") {
+      options.oppositionId = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--title") {
+      options.packTitle = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--pack-id") {
+      options.packId = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--topic") {
+      options.topicName = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--topic-id") {
+      options.topicId = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--wrong") {
+      const value = Number(readFlagValue(args, index, arg));
+
+      if (!Number.isFinite(value)) {
+        throw new Error("--wrong debe ser un número.");
+      }
+
+      options.wrongScore = value;
+      index += 1;
+      continue;
+    }
+
+    if (arg === "--output" || arg === "-o") {
+      options.outputPath = readFlagValue(args, index, arg);
+      index += 1;
+      continue;
+    }
+
+    if (arg.startsWith("--")) {
+      throw new Error(`Opción desconocida: ${arg}`);
+    }
+
+    if (options.pdfPath) {
+      throw new Error(`Solo se admite un PDF de entrada. Valor inesperado: ${arg}`);
+    }
+
+    options.pdfPath = arg;
+  }
+
+  return options;
+}
 
 function slugify(value: string) {
   return value
@@ -254,35 +382,138 @@ async function reviewCandidate(
   return reviewed;
 }
 
-async function main() {
+function createPack({
+  accepted,
+  oppositionId,
+  oppositionName,
+  packId,
+  packTitle,
+  topicId,
+  topicName,
+  wrongScore
+}: {
+  accepted: MutableCandidate[];
+  oppositionId: string;
+  oppositionName: string;
+  packId: string;
+  packTitle: string;
+  topicId: string;
+  topicName: string;
+  wrongScore: number;
+}) {
+  const topics = new Map<string, string>();
+  topics.set(topicId, topicName);
+  accepted.forEach((question) => {
+    if (!topics.has(question.topicId)) {
+      topics.set(question.topicId, question.topicId);
+    }
+  });
+
+  const pack: QuestionPack = {
+    formatVersion: 1,
+    id: packId,
+    opposition: {
+      id: oppositionId,
+      name: oppositionName
+    },
+    title: packTitle,
+    scoring: {
+      correct: 1,
+      wrong: Number.isFinite(wrongScore) ? wrongScore : -0.33,
+      blank: 0
+    },
+    topics: Array.from(topics, ([id, name]) => ({ id, name })),
+    questions: accepted.map((question, index) => ({
+      id: `${packId}-${String(index + 1).padStart(3, "0")}`,
+      topicId: question.topicId,
+      prompt: question.prompt,
+      options: OPTION_IDS.map((id) => {
+        const option = question.options.find((item) => item.id === id);
+        return {
+          id,
+          text: option?.text ?? ""
+        };
+      }),
+      correctOptionId: question.correctOptionId,
+      explanation: question.explanation
+    }))
+  };
+
+  return questionPackSchema.parse(pack);
+}
+
+function hasDetectedAnswer(candidate: CandidateQuestion) {
+  return OPTION_IDS.includes(candidate.correctOptionId);
+}
+
+async function runNoWizard(options: CliOptions, candidates: CandidateQuestion[], defaultBaseName: string) {
+  const oppositionName = options.oppositionName ?? "Oposición";
+  const oppositionId = slugify(options.oppositionId ?? oppositionName);
+  const packTitle = options.packTitle ?? defaultBaseName;
+  const packId = slugify(options.packId ?? defaultBaseName);
+  const topicName = options.topicName ?? "General";
+  const topicId = slugify(options.topicId ?? topicName);
+  const accepted: MutableCandidate[] = candidates
+    .filter(hasDetectedAnswer)
+    .map((candidate) => ({
+      ...candidate,
+      topicId,
+      explanation: ""
+    }));
+  const skipped = candidates.length - accepted.length;
+
+  if (!accepted.length) {
+    throw new Error(
+      "No se pudo generar JSON automático porque ninguna pregunta tenía respuesta correcta detectable."
+    );
+  }
+
+  const parsed = createPack({
+    accepted,
+    oppositionId,
+    oppositionName,
+    packId,
+    packTitle,
+    topicId,
+    topicName,
+    wrongScore: options.wrongScore ?? -0.33
+  });
+  const outputPath = path.resolve(
+    options.outputPath ?? path.join("content", "imported", `${parsed.id}.json`)
+  );
+
+  await fs.mkdir(path.dirname(outputPath), { recursive: true });
+  await fs.writeFile(outputPath, `${JSON.stringify(parsed, null, 2)}\n`, "utf8");
+  console.log(`JSON guardado en ${outputPath}`);
+  console.log(`Preguntas exportadas: ${accepted.length}`);
+
+  if (skipped) {
+    console.log(`Preguntas saltadas sin respuesta correcta detectable: ${skipped}`);
+  }
+}
+
+async function runWizard(options: CliOptions, candidates: CandidateQuestion[], defaultBaseName: string) {
   const rl = createInterface({ input, output });
 
   try {
-    const argumentPath = process.argv[2];
-    const pdfPath = argumentPath
-      ? path.resolve(argumentPath)
-      : path.resolve(await rl.question("Ruta del PDF: "));
-    const defaultBaseName = slugify(path.basename(pdfPath, path.extname(pdfPath)));
-
-    console.log(`Leyendo ${pdfPath}...`);
-    const text = await extractTextFromPdf(pdfPath);
-    const candidates = parseCandidates(text);
-
-    if (!candidates.length) {
-      throw new Error("No se detectaron preguntas con 4 opciones en el PDF.");
-    }
-
-    console.log(`Detectadas ${candidates.length} preguntas candidatas.`);
-
-    const oppositionName = await askWithDefault(rl, "Nombre de la oposición", "Oposición");
+    const oppositionName = options.oppositionName
+      ?? (await askWithDefault(rl, "Nombre de la oposición", "Oposición"));
     const oppositionId = slugify(
-      await askWithDefault(rl, "ID de la oposición", slugify(oppositionName))
+      options.oppositionId
+        ?? (await askWithDefault(rl, "ID de la oposición", slugify(oppositionName)))
     );
-    const packTitle = await askWithDefault(rl, "Título del pack", defaultBaseName);
-    const packId = slugify(await askWithDefault(rl, "ID del pack", defaultBaseName));
-    const topicName = await askWithDefault(rl, "Tema por defecto", "General");
-    const topicId = slugify(await askWithDefault(rl, "ID del tema", slugify(topicName)));
-    const wrongScore = Number(await askWithDefault(rl, "Penalización por fallo", "-0.33"));
+    const packTitle = options.packTitle
+      ?? (await askWithDefault(rl, "Título del pack", defaultBaseName));
+    const packId = slugify(
+      options.packId ?? (await askWithDefault(rl, "ID del pack", defaultBaseName))
+    );
+    const topicName = options.topicName
+      ?? (await askWithDefault(rl, "Tema por defecto", "General"));
+    const topicId = slugify(
+      options.topicId ?? (await askWithDefault(rl, "ID del tema", slugify(topicName)))
+    );
+    const wrongScore = options.wrongScore
+      ?? Number(await askWithDefault(rl, "Penalización por fallo", "-0.33"));
     const accepted: MutableCandidate[] = [];
 
     for (let index = 0; index < candidates.length; index += 1) {
@@ -297,48 +528,19 @@ async function main() {
       throw new Error("No se aceptó ninguna pregunta.");
     }
 
-    const topics = new Map<string, string>();
-    topics.set(topicId, topicName);
-    accepted.forEach((question) => {
-      if (!topics.has(question.topicId)) {
-        topics.set(question.topicId, question.topicId);
-      }
+    const parsed = createPack({
+      accepted,
+      oppositionId,
+      oppositionName,
+      packId,
+      packTitle,
+      topicId,
+      topicName,
+      wrongScore
     });
-
-    const pack: QuestionPack = {
-      formatVersion: 1,
-      id: packId,
-      opposition: {
-        id: oppositionId,
-        name: oppositionName
-      },
-      title: packTitle,
-      scoring: {
-        correct: 1,
-        wrong: Number.isFinite(wrongScore) ? wrongScore : -0.33,
-        blank: 0
-      },
-      topics: Array.from(topics, ([id, name]) => ({ id, name })),
-      questions: accepted.map((question, index) => ({
-        id: `${packId}-${String(index + 1).padStart(3, "0")}`,
-        topicId: question.topicId,
-        prompt: question.prompt,
-        options: OPTION_IDS.map((id) => {
-          const option = question.options.find((item) => item.id === id);
-          return {
-            id,
-            text: option?.text ?? ""
-          };
-        }),
-        correctOptionId: question.correctOptionId,
-        explanation: question.explanation
-      }))
-    };
-
-    const parsed = questionPackSchema.parse(pack);
     const defaultOutput = path.join("content", "imported", `${parsed.id}.json`);
     const outputPath = path.resolve(
-      await askWithDefault(rl, "Archivo de salida", defaultOutput)
+      options.outputPath ?? (await askWithDefault(rl, "Archivo de salida", defaultOutput))
     );
 
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
@@ -346,6 +548,55 @@ async function main() {
     console.log(`\nJSON guardado en ${outputPath}`);
   } finally {
     rl.close();
+  }
+}
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  let rl: ReturnType<typeof createInterface> | null = null;
+
+  try {
+    const pdfPath = options.pdfPath
+      ? path.resolve(options.pdfPath)
+      : options.noWizard
+        ? null
+        : undefined;
+
+    if (pdfPath === null) {
+      throw new Error("En modo --no-wizard debes indicar la ruta del PDF.");
+    }
+
+    const resolvedPdfPath =
+      pdfPath ??
+      path.resolve(
+        await (() => {
+          rl = createInterface({ input, output });
+          return rl.question("Ruta del PDF: ");
+        })()
+      );
+    const defaultBaseName = slugify(path.basename(resolvedPdfPath, path.extname(resolvedPdfPath)));
+
+    rl?.close();
+    rl = null;
+
+    console.log(`Leyendo ${resolvedPdfPath}...`);
+    const text = await extractTextFromPdf(resolvedPdfPath);
+    const candidates = parseCandidates(text);
+
+    if (!candidates.length) {
+      throw new Error("No se detectaron preguntas con 4 opciones en el PDF.");
+    }
+
+    console.log(`Detectadas ${candidates.length} preguntas candidatas.`);
+
+    if (options.noWizard) {
+      await runNoWizard(options, candidates, defaultBaseName);
+      return;
+    }
+
+    await runWizard(options, candidates, defaultBaseName);
+  } finally {
+    rl?.close();
   }
 }
 

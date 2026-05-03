@@ -57,6 +57,27 @@ npm run import:pdf -- imports/pdfs/mi-test.pdf
 
 La CLI detecta preguntas candidatas, te permite revisarlas en terminal y genera un JSON definitivo compatible.
 
+Para generar el JSON sin confirmar pregunta por pregunta:
+
+```bash
+npm run import:pdf -- imports/pdfs/mi-test.pdf --no-wizard --opposition "Administrativo" --topic "Constitución"
+```
+
+También puedes fijar la salida y otros metadatos:
+
+```bash
+npm run import:pdf -- imports/pdfs/mi-test.pdf --no-wizard \
+  --opposition "Administrativo" \
+  --opposition-id administrativo \
+  --title "Test Constitución" \
+  --pack-id test-constitucion \
+  --topic "Constitución" \
+  --wrong -0.33 \
+  --output content/imported/test-constitucion.json
+```
+
+En modo `--no-wizard`, la CLI solo exporta preguntas cuya respuesta correcta se haya detectado en el PDF. Las preguntas sin solución detectable se saltan para no inventar respuestas.
+
 ## Admin y GitHub
 
 El admin necesita una clave simple:

@@ -75,6 +75,7 @@ export async function POST(request: Request) {
         correctOptionId: question.correctOptionId,
         isCorrect: result.isCorrect,
         score: result.score,
+        maxScore: question.scoring.correct,
         explanation: question.explanation
       });
     }

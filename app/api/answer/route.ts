@@ -43,6 +43,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       isCorrect: result.isCorrect,
       score: result.score,
+      maxScore: question.scoring.correct,
       correctOptionId: question.correctOptionId,
       explanation: question.explanation
     });

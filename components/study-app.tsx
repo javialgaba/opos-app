@@ -25,8 +25,24 @@ type Tab = "practice" | "exam" | "progress";
 type AnswerResult = {
   isCorrect: boolean;
   score: number;
+  maxScore: number;
   correctOptionId: string;
   explanation: string;
+};
+
+type RoundAnswer = AnswerResult & {
+  questionId: string;
+  selectedOptionId: string;
+};
+
+type RoundSummary = {
+  total: number;
+  correct: number;
+  wrong: number;
+  score: number;
+  maxScore: number;
+  grade: number;
+  results: RoundAnswer[];
 };
 
 type ExamResult = {
@@ -62,6 +78,8 @@ type ProgressPayload = {
 };
 
 const PROFILE_STORAGE_KEY = "opos.profile";
+const PRACTICE_ROUND_SIZE = 20;
+const EXAM_QUESTION_COUNT = 100;
 
 function getAccuracy(correct: number, attempts: number) {
   if (!attempts) {
@@ -77,6 +95,14 @@ function getQuestionLabel(question: PublicQuestion | undefined) {
   }
 
   return `${question.oppositionName} · ${question.topicName}`;
+}
+
+function getGrade(score: number, maxScore: number) {
+  if (maxScore <= 0) {
+    return 0;
+  }
+
+  return Math.max(0, Math.min(10, (score / maxScore) * 10));
 }
 
 async function requestJson<T>(url: string, init?: RequestInit): Promise<T> {
@@ -102,10 +128,14 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
   const [tab, setTab] = useState<Tab>("practice");
   const [oppositionId, setOppositionId] = useState("");
   const [topicId, setTopicId] = useState("");
-  const [queue, setQueue] = useState<PublicQuestion[]>(initialQuestions.slice(0, 20));
+  const [queue, setQueue] = useState<PublicQuestion[]>(
+    initialQuestions.slice(0, PRACTICE_ROUND_SIZE)
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState("");
   const [answerResult, setAnswerResult] = useState<AnswerResult | null>(null);
+  const [practiceAnswers, setPracticeAnswers] = useState<Record<string, RoundAnswer>>({});
+  const [practiceRoundFinished, setPracticeRoundFinished] = useState(false);
   const [examAnswers, setExamAnswers] = useState<Record<string, string>>({});
   const [examResult, setExamResult] = useState<ExamResult | null>(null);
   const [progress, setProgress] = useState<ProgressPayload | null>(null);
@@ -113,6 +143,7 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
   const [message, setMessage] = useState("");
 
   const currentQuestion = queue[currentIndex];
+  const queueLimit = tab === "exam" ? EXAM_QUESTION_COUNT : PRACTICE_ROUND_SIZE;
 
   const oppositions = useMemo(() => {
     const map = new Map<string, string>();
@@ -168,11 +199,30 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
 
   useEffect(() => {
     if (profile) {
-      void loadQueue(tab === "exam" ? 12 : 20);
+      void loadQueue(queueLimit);
       void loadProgress(profile.id);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [profile, oppositionId, topicId]);
+
+  const practiceSummary = useMemo<RoundSummary>(() => {
+    const results = queue
+      .map((question) => practiceAnswers[question.id])
+      .filter((result): result is RoundAnswer => Boolean(result));
+    const correct = results.filter((result) => result.isCorrect).length;
+    const score = results.reduce((total, result) => total + result.score, 0);
+    const maxScore = results.reduce((total, result) => total + result.maxScore, 0);
+
+    return {
+      total: results.length,
+      correct,
+      wrong: results.length - correct,
+      score,
+      maxScore,
+      grade: getGrade(score, maxScore),
+      results
+    };
+  }, [practiceAnswers, queue]);
 
   async function saveAlias() {
     setMessage("");
@@ -194,7 +244,7 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
     }
   }
 
-  async function loadQueue(limit = 20) {
+  async function loadQueue(limit = PRACTICE_ROUND_SIZE) {
     const params = new URLSearchParams();
 
     if (profile?.id) {
@@ -222,6 +272,8 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
       setCurrentIndex(0);
       setSelectedOptionId("");
       setAnswerResult(null);
+      setPracticeAnswers({});
+      setPracticeRoundFinished(false);
       setExamAnswers({});
       setExamResult(null);
     } catch (error) {
@@ -265,6 +317,14 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
       });
 
       setAnswerResult(payload);
+      setPracticeAnswers((answers) => ({
+        ...answers,
+        [currentQuestion.id]: {
+          ...payload,
+          questionId: currentQuestion.id,
+          selectedOptionId
+        }
+      }));
       await loadProgress(profile.id);
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "No se pudo corregir.");
@@ -279,9 +339,11 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
 
     if (currentIndex + 1 < queue.length) {
       setCurrentIndex((index) => index + 1);
-    } else {
-      void loadQueue(20);
     }
+  }
+
+  function finishPracticeRound() {
+    setPracticeRoundFinished(true);
   }
 
   async function finishExam() {
@@ -379,7 +441,7 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
               label="Práctica"
               onClick={() => {
                 setTab("practice");
-                void loadQueue(20);
+                void loadQueue(PRACTICE_ROUND_SIZE);
               }}
             />
             <TabButton
@@ -388,7 +450,7 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
               label="Examen"
               onClick={() => {
                 setTab("exam");
-                void loadQueue(12);
+                void loadQueue(EXAM_QUESTION_COUNT);
               }}
             />
             <TabButton
@@ -437,7 +499,7 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
             </label>
             <button
               className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-md border border-ink/15 bg-white px-3 text-sm font-semibold text-ink transition hover:bg-ink/5"
-              onClick={() => void loadQueue(tab === "exam" ? 12 : 20)}
+              onClick={() => void loadQueue(queueLimit)}
               title="Recargar preguntas"
               type="button"
             >
@@ -463,10 +525,15 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
               answerResult={answerResult}
               currentIndex={currentIndex}
               isLoading={isLoading}
+              onFinish={finishPracticeRound}
               onNext={nextPracticeQuestion}
+              onRestart={() => void loadQueue(PRACTICE_ROUND_SIZE)}
               onSelect={setSelectedOptionId}
               onSubmit={() => void submitPracticeAnswer()}
+              roundFinished={practiceRoundFinished}
+              summary={practiceSummary}
               question={currentQuestion}
+              queue={queue}
               queueLength={queue.length}
               selectedOptionId={selectedOptionId}
             />
@@ -529,23 +596,37 @@ function PracticePanel({
   answerResult,
   currentIndex,
   isLoading,
+  onFinish,
   onNext,
+  onRestart,
   onSelect,
   onSubmit,
+  roundFinished,
   question,
+  queue,
   queueLength,
-  selectedOptionId
+  selectedOptionId,
+  summary
 }: {
   answerResult: AnswerResult | null;
   currentIndex: number;
   isLoading: boolean;
+  onFinish: () => void;
   onNext: () => void;
+  onRestart: () => void;
   onSelect: (optionId: string) => void;
   onSubmit: () => void;
+  roundFinished: boolean;
   question: PublicQuestion | undefined;
+  queue: PublicQuestion[];
   queueLength: number;
   selectedOptionId: string;
+  summary: RoundSummary;
 }) {
+  if (roundFinished) {
+    return <RoundResultPanel onRestart={onRestart} queue={queue} summary={summary} />;
+  }
+
   if (!question) {
     return <EmptyState text="No hay preguntas para este filtro." />;
   }
@@ -553,6 +634,7 @@ function PracticePanel({
   const correctOption = answerResult
     ? question.options.find((option) => option.id === answerResult.correctOptionId)
     : null;
+  const isLastQuestion = currentIndex === queueLength - 1;
 
   return (
     <div className="flex h-full flex-col gap-5">
@@ -594,11 +676,20 @@ function PracticePanel({
         {answerResult ? (
           <button
             className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-tide px-4 text-sm font-semibold text-white transition hover:bg-tide/90"
-            onClick={onNext}
+            onClick={isLastQuestion ? onFinish : onNext}
             type="button"
           >
-            Siguiente
-            <ArrowRight className="size-4" />
+            {isLastQuestion ? (
+              <>
+                Finalizar
+                <Check className="size-4" />
+              </>
+            ) : (
+              <>
+                Siguiente
+                <ArrowRight className="size-4" />
+              </>
+            )}
           </button>
         ) : (
           <button
@@ -739,6 +830,85 @@ function ExamPanel({
             <ArrowRight className="size-4" />
           </button>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function RoundResultPanel({
+  onRestart,
+  queue,
+  summary
+}: {
+  onRestart: () => void;
+  queue: PublicQuestion[];
+  summary: RoundSummary;
+}) {
+  return (
+    <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-3 border-b border-ink/10 pb-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-sm font-medium text-tide">Ronda finalizada</p>
+          <h2 className="mt-1 text-2xl font-semibold tracking-normal text-ink">
+            Calificación {summary.grade.toFixed(2)} / 10
+          </h2>
+        </div>
+        <button
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-tide px-4 text-sm font-semibold text-white transition hover:bg-tide/90"
+          onClick={onRestart}
+          type="button"
+        >
+          <RotateCcw className="size-4" />
+          Nueva ronda
+        </button>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-4">
+        <Metric label="Aciertos" value={summary.correct} />
+        <Metric label="Fallos" value={summary.wrong} />
+        <Metric label="Preguntas" value={summary.total} />
+        <Metric
+          label="Puntuación"
+          value={`${summary.score.toFixed(2)} / ${summary.maxScore.toFixed(2)}`}
+        />
+      </div>
+      <div className="space-y-3">
+        {queue.map((item, index) => {
+          const result = summary.results.find((entry) => entry.questionId === item.id);
+          const selectedOption = item.options.find(
+            (option) => option.id === result?.selectedOptionId
+          );
+          const correctOption = item.options.find(
+            (option) => option.id === result?.correctOptionId
+          );
+
+          return (
+            <div
+              className={`rounded-md border p-3 ${
+                result?.isCorrect ? "border-moss/30 bg-moss/10" : "border-coral/25 bg-coral/5"
+              }`}
+              key={item.id}
+            >
+              <p className="text-sm font-semibold text-ink">
+                {index + 1}. {item.prompt}
+              </p>
+              {result ? (
+                <>
+                  <p className="mt-2 text-sm text-ink/70">
+                    Marcada: {result.selectedOptionId}
+                    {selectedOption ? ` · ${selectedOption.text}` : ""} · Correcta:{" "}
+                    {result.correctOptionId}
+                    {correctOption ? ` · ${correctOption.text}` : ""}
+                  </p>
+                  {result.explanation ? (
+                    <p className="mt-2 text-sm text-ink/70">{result.explanation}</p>
+                  ) : null}
+                </>
+              ) : (
+                <p className="mt-2 text-sm text-ink/70">Sin respuesta registrada.</p>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
