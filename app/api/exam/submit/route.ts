@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { findQuestion } from "@/lib/content/loader";
+import { loadQuestionBank } from "@/lib/content/loader";
 import { scoreAnswer } from "@/lib/content/schema";
-import { recordAttempt, recordExamSession } from "@/lib/progress/store";
+import { recordAttempts, recordExamSession } from "@/lib/progress/store";
 
 export async function POST(request: Request) {
   try {
@@ -25,9 +25,12 @@ export async function POST(request: Request) {
     let maxScore = 0;
     let oppositionId = "";
     let topicId: string | null | undefined;
+    const bank = await loadQuestionBank();
+    const questionsById = new Map(bank.questions.map((question) => [question.questionKey, question]));
+    const attempts: Parameters<typeof recordAttempts>[0] = [];
 
     for (const answer of body.answers) {
-      const question = await findQuestion(answer.questionId);
+      const question = questionsById.get(answer.questionId);
 
       if (!question) {
         continue;
@@ -57,7 +60,7 @@ export async function POST(request: Request) {
       score += result.score;
       maxScore += question.scoring.correct;
 
-      await recordAttempt({
+      attempts.push({
         profileId: body.profileId,
         questionKey: question.questionKey,
         oppositionId: question.oppositionId,
@@ -79,6 +82,8 @@ export async function POST(request: Request) {
         explanation: question.explanation
       });
     }
+
+    await recordAttempts(attempts);
 
     if (oppositionId) {
       await recordExamSession({

@@ -381,7 +381,7 @@ export function StudyApp({ initialQuestions }: { initialQuestions: PublicQuestio
       });
 
       setExamResult(payload);
-      await loadProgress(profile.id);
+      void loadProgress(profile.id);
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "No se pudo cerrar el examen.");
     } finally {

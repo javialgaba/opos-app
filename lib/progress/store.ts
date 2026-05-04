@@ -151,43 +151,60 @@ export async function getOrCreateProfile(aliasInput: string): Promise<Profile> {
 export async function recordAttempt(
   attempt: Omit<AttemptRecord, "id" | "createdAt">
 ) {
+  const [record] = await recordAttempts([attempt]);
+
+  if (!record) {
+    throw new Error("No se pudo registrar el intento.");
+  }
+
+  return record;
+}
+
+export async function recordAttempts(
+  attempts: Array<Omit<AttemptRecord, "id" | "createdAt">>
+) {
   const supabase = getServerSupabaseClient();
   const createdAt = new Date().toISOString();
 
+  if (!attempts.length) {
+    return [];
+  }
+
   if (!supabase) {
-    const record = {
+    const records = attempts.map((attempt) => ({
       ...attempt,
       id: crypto.randomUUID(),
       createdAt
-    };
+    }));
 
-    memoryState.attempts.push(record);
-    return record;
+    memoryState.attempts.push(...records);
+    return records;
   }
 
   const { data, error } = await supabase
     .from("attempts")
-    .insert({
-      profile_id: attempt.profileId,
-      question_key: attempt.questionKey,
-      opposition_id: attempt.oppositionId,
-      topic_id: attempt.topicId,
-      mode: attempt.mode,
-      selected_option_id: attempt.selectedOptionId,
-      correct_option_id: attempt.correctOptionId,
-      is_correct: attempt.isCorrect,
-      score: attempt.score
-    })
+    .insert(
+      attempts.map((attempt) => ({
+        profile_id: attempt.profileId,
+        question_key: attempt.questionKey,
+        opposition_id: attempt.oppositionId,
+        topic_id: attempt.topicId,
+        mode: attempt.mode,
+        selected_option_id: attempt.selectedOptionId,
+        correct_option_id: attempt.correctOptionId,
+        is_correct: attempt.isCorrect,
+        score: attempt.score
+      }))
+    )
     .select(
       "id, profile_id, question_key, opposition_id, topic_id, mode, selected_option_id, correct_option_id, is_correct, score, created_at"
-    )
-    .single();
+    );
 
   if (error) {
     throw asSupabaseError(error, "No se pudo registrar el intento.");
   }
 
-  return mapAttempt(data);
+  return (data ?? []).map(mapAttempt);
 }
 
 export async function recordExamSession(session: ExamSessionInput) {
